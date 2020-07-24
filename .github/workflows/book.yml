@@ -15,15 +15,15 @@ on:
 # This job installs dependencies, build the book, and pushes it to `gh-pages`
 jobs:
   deploy-book:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-18.04
     steps:
     - uses: actions/checkout@v2
 
     # Install dependencies
-    - name: Set up Python 3.6
+    - name: Set up Python 3.6.8
       uses: actions/setup-python@v1
       with:
-        python-version: 3.6
+        python-version: 3.6.8
 
     - name: Install dependencies
       run: |
@@ -32,7 +32,7 @@ jobs:
     # Build the book
     - name: Build the book
       run: |
-        jupyter-book build .
+        jb build .
 
     # Push the book's HTML to github-pages
     - name: GitHub Pages action
