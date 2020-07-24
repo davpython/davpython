@@ -1,5 +1,5 @@
 jupyter-book>=0.7.0b
-jupyterlab
+jupyter-client
 matplotlib
 numpy
 pandas
