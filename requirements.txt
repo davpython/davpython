@@ -1,4 +1,5 @@
 jupyter-book
+python>=3.6
 matplotlib
 numpy
 pandas
