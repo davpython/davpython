@@ -1,5 +1,4 @@
 jupyter-book
-python==3.6.11
 matplotlib
 numpy
 pandas
