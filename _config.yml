@@ -1,7 +1,7 @@
 # Book settings
 title: Data Analysis and Visualization with Python
 author: Pablo Caceres
-logo: logo.png
+logo: logo-book2.svg
 
 latex:
   latex_documents:
