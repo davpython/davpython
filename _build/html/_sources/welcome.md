@@ -3,8 +3,7 @@ Welcome
 
 This is the official site for my book **Data Analysis and Visualization with Python**
 
-<img src="_static/logo-book-2-large.png">
-
+![](./images/logo-book-2-large.png)
 
 ## Introduction
 
