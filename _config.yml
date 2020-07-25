@@ -1,6 +1,6 @@
 # Book settings
-title: My sample book
-author: The Jupyter Book Community
+title: Data Analysis and Visualization with Python
+author: Pablo Caceres
 logo: logo.png
 
 latex:

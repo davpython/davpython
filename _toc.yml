@@ -1,5 +1,4 @@
-- file: intro
+- file: welcome
 - file: content
   sections:
-    - file: markdown
     - file: part-I
