@@ -1,4 +1,5 @@
 - file: welcome
+- file: scope
 - file: about
 - file: content
   # sections:

@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>Book Contents &#8212; Data Analysis and Visualization with Python</title>
+    <title>Book Scope &#8212; Data Analysis and Visualization with Python</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
     <link href="_static/css/index.css" rel="stylesheet">
     <link rel="stylesheet" href="_static/sphinx-book-theme.css" type="text/css" />
@@ -31,7 +31,8 @@
     <link rel="author" title="About these documents" href="about.html" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="About" href="about.html" />
+    <link rel="next" title="About" href="about.html" />
+    <link rel="prev" title="Welcome" href="welcome.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="docsearch:language" content="en">
@@ -72,8 +73,8 @@
  </li>
 </ul>
 <ul class="current nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="scope.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Book Scope
   </a>
  </li>
@@ -82,8 +83,8 @@
    About
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="content.html">
    Book Contents
   </a>
  </li>
@@ -129,7 +130,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/content.md"><button type="button"
+        <a class="dropdown-buttons" href="_sources/scope.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -158,8 +159,13 @@
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#table-of-contents">
-   Table of contents
+  <a class="reference internal nav-link" href="#explorer-hunters-artisans-and-detectives">
+   Explorer, hunters, artisans, and detectives
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-analysis-and-visualization-of-what">
+   Data analysis and visualization of what
   </a>
  </li>
 </ul>
@@ -172,103 +178,33 @@
         
               <div>
                 
-  <div class="section" id="book-contents">
-<h1>Book Contents<a class="headerlink" href="#book-contents" title="Permalink to this headline">¶</a></h1>
-<p>The book contents are in active development. The table of contents is provisionary and it may change as I write the book.</p>
-<p>============================</p>
-<p>Site under constructrion 👷</p>
-<p>============================</p>
-<div class="section" id="table-of-contents">
-<h2>Table of contents<a class="headerlink" href="#table-of-contents" title="Permalink to this headline">¶</a></h2>
-<p><strong>INTRODUCTION</strong></p>
-<p><strong>Introduction to data analysis with Python</strong></p>
+  <div class="section" id="book-scope">
+<h1>Book Scope<a class="headerlink" href="#book-scope" title="Permalink to this headline">¶</a></h1>
+<p>Broadly speaking, data analysis comes in two flavors: <strong>exploratory</strong> and <strong>confirmatory</strong>. This book is primarily concerned with exploratory data analysis (and visualization).</p>
+<p>In this day and age, when artificial intelligence dominates everyone’s agenda in the data science space, exploratory data analysis seems to be a relic from the past, a lesser form of art unfit for the elite of machine learning and deep learning specialist. At best, exploratory data analysis is regarded as a necessary yet trivial task to do before data modeling, something for which no training or deep reflection is necessary beyond common sense.  Nevertheless, insightful and effective exploratory data analysis is both a <strong>ubiquitous</strong> to any data science endeavor and <strong>remarkably hard to do</strong> without proper tools and experience.</p>
+<p>Consider all the things related to data analysis before modeling:</p>
 <ul class="simple">
-<li><p>What is data analysis</p></li>
-<li><p>Data analysis with Python</p></li>
-<li><p>The Python data analysis toolbox</p>
-<ul>
-<li><p>NumPy</p></li>
-<li><p>Pandas</p></li>
-<li><p>SciPy</p></li>
-<li><p>Statsmodels</p></li>
-<li><p>PyMC3</p></li>
-<li><p>Scikit-Learn</p></li>
-<li><p>Matplolib</p></li>
-<li><p>Seaborn</p></li>
-<li><p>Altair</p></li>
-<li><p>Bokeh</p></li>
+<li><p>Import data</p></li>
+<li><p>Format data</p></li>
+<li><p>Clean data and anomaly detection</p></li>
+<li><p>Examine underlying assumptions for modeling</p></li>
+<li><p>Data transformation and feature engineering</p></li>
+<li><p>Creating engaging and insightful visual representation of data</p></li>
+<li><p>Hypothesis formation</p></li>
+<li><p>To determine what can and cannot be done with the dataset</p></li>
+<li><p>To determine whether more data needs to be collected</p></li>
+<li><p>To determine what is the best approach from a data modeling perspective</p></li>
+<li><p>To generate insights and reveal underlying relationships in the dataset</p></li>
 </ul>
-</li>
-</ul>
-<p><strong>Prerequisites</strong></p>
-<ul class="simple">
-<li><p>Basic Python programming</p></li>
-<li><p>Basic algebra ideas</p></li>
-</ul>
-<p><strong>PART I: Data wrangling and exploratory data analysis</strong></p>
-<p><strong>Basic concepts in data analysis</strong>:</p>
-<ul class="simple">
-<li><p>Tabular data</p></li>
-<li><p>Non tabular data</p></li>
-<li><p>Relational databases</p></li>
-<li><p>Time series data</p></li>
-<li><p>Anatomy of a table</p></li>
-<li><p>Types of variables</p></li>
-<li><p>Missing data</p></li>
-<li><p>Data cleaning</p></li>
-<li><p>Data exploration</p></li>
-<li><p>Data visualization</p></li>
-<li><p>Hypothesis testing</p></li>
-<li><p>Causal inference</p></li>
-</ul>
-<p><strong>Data analysis workflow</strong></p>
-<ul class="simple">
-<li><p>Questions</p></li>
-<li><p>Data loading</p></li>
-<li><p>Data cleaning</p></li>
-<li><p>Data formating</p></li>
-<li><p>Data exploration and visualization</p></li>
-<li><p>Data modeling</p></li>
-<li><p>Insight and communication</p></li>
-</ul>
-<p><strong>Case study 1</strong></p>
-<p>Data analysis example with real messy data following the standard data analsis workflow</p>
-<p><strong>Introduction to NumPy</strong></p>
-<ul class="simple">
-<li><p>What is NumPy</p></li>
-<li><p>NumPy set up</p></li>
-<li><p>NumPy Arrays</p></li>
-<li><p>Array creation</p></li>
-<li><p>Vectorization</p></li>
-<li><p>Array data type and conversions</p></li>
-<li><p>Array mathematics and element-wise operations</p></li>
-<li><p>Array manipulation</p></li>
-<li><p>Logic functions and array evaluation</p></li>
-<li><p>Array indexing</p></li>
-<li><p>Array copies</p></li>
-<li><p>String operations with NumPy</p></li>
-</ul>
-<p><strong>Introduction to pandas</strong></p>
-<ul class="simple">
-<li><p>What is pandas</p></li>
-<li><p>Pandas set up</p></li>
-<li><p>Pandas data structures</p></li>
-<li><p>Data loading with Pandas</p></li>
-<li><p>Data transformation and lambda functions</p></li>
-<li><p>Indexing and selecting data</p></li>
-<li><p>Merging, joining, and concatenating data</p></li>
-<li><p>Reshaping and pivot tables</p></li>
-<li><p>Data cleaning and missing values</p></li>
-<li><p>Working with text data</p></li>
-<li><p>Multi-index and advance indexing</p></li>
-</ul>
-<p><strong>Case study 2</strong></p>
-<p>Advance data analysis example with real messy data following the standard data analsis workflow</p>
-<p><strong>PART II</strong></p>
-<p><strong>Introduction to data visualization with Python</strong></p>
-<p><strong>Introduction to matplotlib</strong></p>
-<p><strong>Introduction to altair</strong></p>
-<p><strong>Case study 3</strong></p>
+<p>Correlational analysis, hypothesis testing, causal inference, classical machine learning, and deep learning, all depend upon the correct execution of the exploratory data analysis. I will go as far as to say that a <strong>poorly executed exploratory data analysis will deem any data modeling process suboptimal at best and useless at worst</strong>. Exploratory data analysis lays the foundations for data modeling, and nothing good can come from weak foundations.</p>
+<div class="section" id="explorer-hunters-artisans-and-detectives">
+<h2>Explorer, hunters, artisans, and detectives<a class="headerlink" href="#explorer-hunters-artisans-and-detectives" title="Permalink to this headline">¶</a></h2>
+<p>Nowadays, is common to compare the task of data analysis to the task of scientific discovery. I dislike such a comparison particularly when exploration and description are the goals. The extent to which science demands certainty and precision just do not match the level of uncertainty and imprecision data analysis must endure. Hence, it is a matter of degree. I think data analysts are closer to <em>explorers</em>, <em>hunters</em>, <em>artisans</em>, and <em>detectives</em>, all of whom rely way more on a mix of intuition, experience, and ad hoc techniques, and that must endure higher levels of uncertainty and imprecision.</p>
+</div>
+<div class="section" id="data-analysis-and-visualization-of-what">
+<h2>Data analysis and visualization of what<a class="headerlink" href="#data-analysis-and-visualization-of-what" title="Permalink to this headline">¶</a></h2>
+<p>As explorers, hunters, artisans, and detectives, data analysts develop areas of expertise with training and practice. A homicide detective will not be as good in investigating cybercrime, in the same manner that a financial data analyst will not be as good at analyzing geological data.</p>
+<p>My training is in the social and behavioral sciences: sociology, economics, psychology, and neuroscience, are all disciplines I have been trained on at different points in my adult life. As a result, I know little about analyzing data in geology, genomics, physics, pharmacology, ecology, epidemiology, chemistry, factory production, and pretty much anything that’s not related to my training and experience. I considered renaming this book “Data Analysis and Visualization for the Social Sciences with Python” yet I still believe that many if not all of the principles and techniques I’ll explain are useful for people in many areas of expertise. I promise I’ll do my best to make the content as general and relevant as possible for people from a wide variety of disciplines.</p>
 </div>
 </div>
 
@@ -281,7 +217,8 @@
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="about.html" title="previous page">About</a>
+    <a class='left-prev' id="prev-link" href="welcome.html" title="previous page">Welcome</a>
+    <a class='right-next' id="next-link" href="about.html" title="next page">About</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">

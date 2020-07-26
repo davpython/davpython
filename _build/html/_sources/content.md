@@ -1,7 +1,13 @@
 Book Contents
 =======================
 
-The book contents are in active development. The table of contents is provisionary and it may change as I write the book 👷
+The book contents are in active development. The table of contents is provisionary and it may change as I write the book.
+
+============================
+
+Site under constructrion 👷
+
+============================
 
 ## Table of contents
 

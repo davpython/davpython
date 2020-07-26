@@ -15,7 +15,7 @@ I could have called this book **Python for...(something)** or **Python Data...(s
 
 I have also said that I consider data analysis and data visualization to be **"crafts"**. I could have said "the science of" or the "art of", but chose the word "craft" as I believe is the one that better describes what an expert on data analysis and data visualization is: **an artisan**. I know, data professionals utilize sophisticated mathematical and computational tools in their work, but that does not justify the denomination of science by itself. Think about it in this way: give the same tools and data to five data analysts, and you will get back five different products, with different structures, charts, and conclusions about the same subject matter. If you think of data analysis as a strictly scientific discipline, this is an odd result. If you think of data analysis as an art, the lack of variability may come as a surprise, as each artist is expected to express their unique artistry in their products. But if you think about it as craftsmanship, the outcome is not odd at all. Give the same tools and wood to five different artisans and ask then for a chair: you will get back five different chairs, but chairs nevertheless. This, I believe, better reflects the true essence of data analysis and data visualization. 
 
-## What will you learn
+## What you will learn
 
 With this book I am to help you learn:
 
@@ -27,6 +27,13 @@ With this book I am to help you learn:
 - Principles of effective data visualization 
 - How to think critically about data representation 
 - How to communicate analysis effectively for a wide variety of audiences
+
+## What you will NOT learn
+
+- Confirmatory data analysis
+- Cuasal inference
+- Machine learning
+- Deep learning
 
 ## License
 

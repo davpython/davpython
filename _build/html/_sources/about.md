@@ -6,8 +6,10 @@ I am Pablo Cáceres, a Ph.D. student in Cognitive Science and Data Science at th
 You can follow me on Twiter [here 🦉](https://twitter.com/CodeBug88)  
 You can find me on LinkedIn [here 🔗](https://www.linkedin.com/feed/)  
 You can check my [personal site here 👨🏾‍💻](https://pablocaceres.org/)  
-You can check my[GitHub account here 🐙](https://github.com/pabloinsente)  
+You can check my [GitHub account here 🐙](https://github.com/pabloinsente)  
 You can read my blog [here 📰](https://pabloinsente.github.io/)  
 
+============================
 
+Site under constructrion 👷
 
