@@ -80,7 +80,7 @@ If you want to learn more about relational databases and data management systems
 
 Tables will be the object with which we will interact the most. Sometimes is easier to remember concepts by associating them with graphical displays. Below you can find a chart with the many ways in which each section of table is called on different contexts. 
 
-<img src="images/anatomy-table.svg">
+![](./images/anatomy-table.svg)
 
 ## Time series data
 
