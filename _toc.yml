@@ -1,6 +1,8 @@
 - file: welcome
-- file: scope
 - file: about
+- file: scope
 - file: content
+- file: 1-intro
+- file: 2-basic-concepts
   # sections:
   #   - file: part-I

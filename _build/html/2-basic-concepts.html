@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>Introduction to data analysis with Python &#8212; Data Analysis and Visualization with Python</title>
+    <title>Basic concepts in data analysis &#8212; Data Analysis and Visualization with Python</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
     <link href="_static/css/index.css" rel="stylesheet">
     <link rel="stylesheet" href="_static/sphinx-book-theme.css" type="text/css" />
@@ -31,6 +31,7 @@
     <link rel="author" title="About these documents" href="about.html" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Introduction to data analysis with Python" href="1-intro.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="docsearch:language" content="en">
@@ -70,7 +71,7 @@
   </a>
  </li>
 </ul>
-<ul class="nav sidenav_l1">
+<ul class="current nav sidenav_l1">
  <li class="toctree-l1">
   <a class="reference internal" href="about.html">
    About
@@ -91,8 +92,8 @@
    Introduction to data analysis with Python
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2-basic-concepts.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Basic concepts in data analysis
   </a>
  </li>
@@ -138,7 +139,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/part-I.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="_sources/2-basic-concepts.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -167,130 +168,46 @@
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#table-of-contents">
-   Table of contents
+  <a class="reference internal nav-link" href="#tabular-data">
+   Tabular data
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#what-is-data-analysis">
-   What is data analysis
+  <a class="reference internal nav-link" href="#non-tabular-data">
+   Non tabular data
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#data-analysis-with-python">
-   Data analysis with Python
+  <a class="reference internal nav-link" href="#relational-databases">
+   Relational databases
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#the-python-data-analysis-toolbox">
-   The Python data analysis toolbox
+  <a class="reference internal nav-link" href="#anatomy-of-a-data-table">
+   Anatomy of a data table
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#numpy">
-     NumPy
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#pandas">
-     Pandas
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#scipy">
-     SciPy
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#statsmodels">
-     Statsmodels
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#pymc3">
-     PyMC3
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#scikit-learn">
-     Scikit-Learn
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#matplotlib">
-     Matplotlib
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#seaborn">
-     Seaborn
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#altair">
-     Altair
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#bokeh">
-     Bokeh
-    </a>
-   </li>
-  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#prerequisites">
-   Prerequisites
+  <a class="reference internal nav-link" href="#time-series-data">
+   Time series data
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#basic-python-programming">
-     Basic Python programming
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#basic-linear-algebra-ideas">
-     Basic linear algebra ideas
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#basic-concepts-in-data-analysis">
-   Basic concepts in data analysis
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#tabular-data">
-     Tabular data
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#non-tabular-data">
-     Non tabular data
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#relational-databases">
-     Relational databases
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#anatomy-of-a-data-table">
-     Anatomy of a data table
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#time-series-data">
-     Time series data
-    </a>
-   </li>
-  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#types-of-variables">
    Types of variables
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#according-to-measurement-type">
+     According to measurement type
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#according-to-their-role-in-causal-processes">
+     According to their role in causal processes
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -302,160 +219,9 @@
         
               <div>
                 
-  <div class="section" id="introduction-to-data-analysis-with-python">
-<h1>Introduction to data analysis with Python<a class="headerlink" href="#introduction-to-data-analysis-with-python" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="table-of-contents">
-<h2>Table of contents<a class="headerlink" href="#table-of-contents" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><p><a class="reference external" href="#what-is-data-analysis">What is data analysis</a></p></li>
-<li><p><a class="reference external" href="#data-analysis-with-python">Data analysis with Python</a></p></li>
-<li><p><a class="reference external" href="#the-python-data-analysis-toolbox">The Python data analysis toolbox</a></p>
-<ul>
-<li><p><a class="reference external" href="#numpy">NumPy</a></p></li>
-<li><p><a class="reference external" href="#pandas">Pandas</a></p></li>
-<li><p><a class="reference external" href="#scipy">SciPy</a></p></li>
-<li><p><a class="reference external" href="#PyMC3">Statsmodels</a></p></li>
-<li><p><a class="reference external" href="#scikit-learn">Scikit-Learn</a></p></li>
-<li><p><a class="reference external" href="#matplotlib">Matplotlib</a></p></li>
-<li><p><a class="reference external" href="#seaborn">Seaborn</a></p></li>
-<li><p><a class="reference external" href="#altair">Altair</a></p></li>
-<li><p><a class="reference external" href="#bokeh">Bokeh</a></p></li>
-</ul>
-</li>
-<li><p><a class="reference external" href="#prerequisites">Prerequisites</a></p>
-<ul>
-<li><p><a class="reference external" href="#basic-python-programming">Basic Python programming</a></p></li>
-<li><p><a class="reference external" href="#basic-linear-algebra-ideas">Basic linear algebra ideas</a></p></li>
-</ul>
-</li>
-<li><p><a class="reference external" href="#basic-concepts-in-data-analysis">Basic concepts in data analysis</a></p>
-<ul>
-<li><p><a class="reference external" href="#tabular-data">Tabular data</a></p></li>
-<li><p><a class="reference external" href="#non-tabular-data">Non tabular data</a></p></li>
-<li><p><a class="reference external" href="#relational-databases">Relational databases</a></p></li>
-<li><p><a class="reference external" href="#anatomy-of-a-data-table">Anatomy of a data table</a></p></li>
-<li><p><a class="reference external" href="#time-series-data">Time series data</a></p></li>
-</ul>
-</li>
-</ul>
-</div>
-<div class="section" id="what-is-data-analysis">
-<h2>What is data analysis<a class="headerlink" href="#what-is-data-analysis" title="Permalink to this headline">¶</a></h2>
-<p>Data analysis is a endeavor with fuzzy boundaries. Some people constrain data analysis to exploratory data analysis and data visualization. Others include hypothesis testing and statistical inference. And some even incorporate machine learning techniques like dimensionality reduction and clustering.</p>
-<p>Here is what, according to John W. Tukey in “<a class="reference external" href="https://projecteuclid.org/download/pdf_1/euclid.aoms/1177704711">The Future of Data Analysis</a>”, one of the leading figures in data analysis and statistics in the XX century, can be included as part of the data analysis process:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;Procedures for analyzing data, techniques for interpreting the results of such procedures, ways of planning the gathering of data to make its analysis easier, more precise or more accurate, and all the machinery and results of (mathematical) statistics which apply to analyzing data.&quot;</span>
-</pre></div>
-</div>
-<p>I personally agree with Tukey. In my 10 years of experience analysis data, I have done such wide variety of things to obtain an answer to a question that I cannot constrain the data analysis process to a fixed subset of techniques. Because, in my view, the heart of data analysis is precisely that: <strong>to utilize a plethora of computational, mathematical, and visualization techniques, to answer meaningful questions based on data</strong>.</p>
-<p>Data analysis is often associated with a subset of roles in the Data Science space: data visualization specialists, business analysts, quantitative analysts, and a few others. Yet, the true i that <strong>there is no endeavor in Data Science that does not rely in data analysis to some extent</strong>. Machine learning researchers, machine learning engineers, data architects, big data engineers, social science researchers, biological science researchers, and pretty much any professional working with data, will need to ingest, clean, transform, explore, visualize, and interrogate data at one point or another.</p>
-<p>Following Tukey line of reasoning, data analysis must be regarded as a foundational skill for any professional and/or researcher that relies on data to accomplish its goals.</p>
-</div>
-<div class="section" id="data-analysis-with-python">
-<h2>Data analysis with Python<a class="headerlink" href="#data-analysis-with-python" title="Permalink to this headline">¶</a></h2>
-<p>Due to the association of data analysis with roles as business analyst and quantitative analysts, Python is sometimes regarded as a secondary tool, with programming languages as R, Scala, SAS, or SPSS, as primary tools instead. From that perspective, it is fair to ask why to spend time learning Python for data analysis instead of R and SPSS. I have several answers for that coming from different angles:</p>
-<ol class="simple">
-<li><p>You probably need to learn more than one programming language as every language has their own strengths and weaknesses. Adding Python to your toolbox will just make you a better analysis.</p></li>
-<li><p>I hear you: “There is just so much time in a day. I cannot learn them all!”. Let’s say you have time for learning a single programming language. Why Python?: (1) It’s free, (2) It’s easy to learn and use, (3) It has a large and constantly growing ecosystem of libraries to accomplish any data analysis task you may face, (4) It’s in high demand.</p></li>
-<li><p>In addition to offering all the necessary tools for what is traditionally considered data analysis, Python is a the leader in the field of machine learning and artificial intelligence, which can expand your toolbox and skills even further.</p></li>
-</ol>
-<p>The above does not mean you will never need to utilize other programming languages for some task, you probably will, yet Python offers a solid base from which to approach all your data analysis challenges.</p>
-</div>
-<div class="section" id="the-python-data-analysis-toolbox">
-<h2>The Python data analysis toolbox<a class="headerlink" href="#the-python-data-analysis-toolbox" title="Permalink to this headline">¶</a></h2>
-<p>The Python data science and scientific computing ecosystem is vast. The <a class="reference external" href="https://numfocus.org/">NUMFOCUS Foundation</a> aggregates and support <a class="reference external" href="https://numfocus.org/sponsored-projects">several projects</a> in the field, so it’s a good place to start and pay attention to.</p>
-<p>I do not pretend to cover all the libraries out there, just because they are too many. Instead,  I’ll briefly mention a selection of the most popular and the ones you probably will utilize the most.</p>
-<div class="section" id="numpy">
-<h3>NumPy<a class="headerlink" href="#numpy" title="Permalink to this headline">¶</a></h3>
-<p>It is no exaggeration to say that <a class="reference external" href="https://numpy.org/">NumPy</a> is at the core of the entire scientific computing Python ecosystem, both as a standalone package for numerical computation and as the engine behind most data science packages.</p>
-<p>NumPy is a package for array-like or matrix-like high-performance computation. Its “engine” is written in C, meaning that NumPy utilized “in the background” pre-compiled C code to perform computations.</p>
-<p>Although it is not our  main tool, we will use NumPy at different parts of the data analysis process.</p>
-<p>An alternative to NumPy is <a class="reference external" href="http://xarray.pydata.org/en/stable/">Xarray</a>, which introduces labels to multidimensional arrays.</p>
-</div>
-<div class="section" id="pandas">
-<h3>Pandas<a class="headerlink" href="#pandas" title="Permalink to this headline">¶</a></h3>
-<p>Given its versatility and easy to use interface, <a class="reference external" href="https://pandas.pydata.org/">pandas</a> has become one of the main tools in the data analysis toolkit. In the Python ecosystem, it is regarded as the <strong>main data wrangling library by far</strong>. In short, pandas provides objects and methods to: <strong>ingest, clean, transform, explore, and output datasets from all sizes</strong>. It can easily take care of datasets in order of millions of datapoints or several gigabytes, replacing -to some extent- the need for “big data” solutions like <a class="reference external" href="https://hadoop.apache.org/">Hadoop</a> or <a class="reference external" href="https://spark.apache.org/">Spark</a>.</p>
-<p>The pandas library reach its full potential when used in tandem with libraries like NumPy, Scipy, Matplotlib, and others. In this sense, pandas is “at the core” of the data analysis process, reason why we will devote more time to pandas than to any other library in this course.</p>
-</div>
-<div class="section" id="scipy">
-<h3>SciPy<a class="headerlink" href="#scipy" title="Permalink to this headline">¶</a></h3>
-<p><a class="reference external" href="https://www.scipy.org/">SciPy</a> is both a library and ecosystem. Here we refer to the <a class="reference external" href="https://www.scipy.org/scipylib/index.html">SciPy library</a>. The goal of Scipy is to provide several easy to use objects and methods for numerical computation, optimization, linear algebra, and statistics.</p>
-</div>
-<div class="section" id="statsmodels">
-<h3>Statsmodels<a class="headerlink" href="#statsmodels" title="Permalink to this headline">¶</a></h3>
-<p>For a long time, people working in statistical analysis could not find a Python-based user-friendly solution for statistics, so they mainly utilized R, SPSS, SAS, and other programming languages.</p>
-<p>The <a class="reference external" href="https://www.statsmodels.org/stable/index.html">Statsmodels</a> package takes care of such a need by providing a series of classes and methods for statistical modeling, ranging from basic hypothesis testing to complex linear mixed effects models. Its interface is based on R, making it easy to adopt for R users.</p>
-</div>
-<div class="section" id="pymc3">
-<h3>PyMC3<a class="headerlink" href="#pymc3" title="Permalink to this headline">¶</a></h3>
-<p>In recent years Bayesian statistics have been adopted as an alternative to traditional frequentist statistics. PyMC3 is a Python based library for Bayesian statistical modeling and probabilistic machine learning. I do not plan to cover Bayesian statistics in this course, yet it is useful know such a library exist.</p>
-</div>
-<div class="section" id="scikit-learn">
-<h3>Scikit-Learn<a class="headerlink" href="#scikit-learn" title="Permalink to this headline">¶</a></h3>
-<p><a class="reference external" href="https://scikit-learn.org/stable/">Sckit-learn</a> it is a library for machine learning and predictive analytics, and one of the most popular libraries in the data science ecosystem. Even though this is not a machine learning course, we will make use of sckit-learn from time to time as it offers several convenient functions for common data analysis tasks like clustering and dimensionality reduction.</p>
-</div>
-<div class="section" id="matplotlib">
-<h3>Matplotlib<a class="headerlink" href="#matplotlib" title="Permalink to this headline">¶</a></h3>
-<p>Python has a strong data visualization ecosystem, and <a class="reference external" href="https://matplotlib.org/">Matplotlib</a> is at the center of it. It is the most mature, stable, flexible, and versatile data visualization library in Python. Although it is designed with 2-dimensional graphics in mind, it can also handle 3-dimensional and interactive graphics. It follows a -mostly- imperative interface, meaning the user has to explicitly declare most details of the chart which makes it a bit verbose at times.</p>
-<p>Matplotlib, and the rest of the Python data science stack, became famous when <a class="reference external" href="https://www.blog.pythonlibrary.org/2019/04/11/python-used-to-take-photo-of-black-hole/">the first images of a black hole</a> were produced with this library.</p>
-</div>
-<div class="section" id="seaborn">
-<h3>Seaborn<a class="headerlink" href="#seaborn" title="Permalink to this headline">¶</a></h3>
-<p><a class="reference external" href="https://seaborn.pydata.org/">Seaborn</a> was developed as a high-level interface for Matplotlib with the aim to simplify chart creation for common tasks. Charts that take a couple of dozens of lines in Matplotlib may be produced with one or two lines in Seaborn. The trade off offered by Seaborn is less control regarding the display and aesthetics, for a simpler to use interface for fast development.</p>
-</div>
-<div class="section" id="altair">
-<h3>Altair<a class="headerlink" href="#altair" title="Permalink to this headline">¶</a></h3>
-<p><a class="reference external" href="https://altair-viz.github.io/">Altair</a> is another data visualization library for Python, probably the younger from the lot. What distinguishes Altair from other libraries is its “declarative approach” to statistical graphics, based on the so-called <a class="reference external" href="https://rb.gy/yb78qp">grammar of graphics</a>. With Matplotlib you focus in the “how” to put things in place, whereas with Altair you focus in the “what”.</p>
-<p>Altair is primarily aimed to work with tabular data, particularly with the pandas DataFrame object. The logic behind Altair is to utilize a elegant and consistent syntax that combines a series of graphical primitives with a series of graphical combinatorial rules. Altair trade off is similar to Seaborn: less control for simplicity and fast development.</p>
-<p>I personally like utilizing Altair as I believe the mental model that provides is exceptionally good, so I will Altair cover in this course rather than Seaborn.</p>
-</div>
-<div class="section" id="bokeh">
-<h3>Bokeh<a class="headerlink" href="#bokeh" title="Permalink to this headline">¶</a></h3>
-<p>Python also provide libraries for web-based interactive data visualization. All those cool interactive charts you find online in the places websites the New York Times can be created with Libraries like <a class="reference external" href="https://docs.bokeh.org/en/latest/index.html">Bokeh</a>. Bokeh provides an elegant and concise interface for interactive graphics, and can easily handle large or streaming datasets online.</p>
-<p>An alternative to Bokeh is <a class="reference external" href="https://plotly.com/">Plotly</a>, which has the advantage of working with multiple programming languages.</p>
-</div>
-</div>
-<div class="section" id="prerequisites">
-<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h2>
-<p>Some people start their data analysis learning path with little more than high-school level mathematics and end up being highly successful. For the purposes of this courses, in addition to high-school level mathematics, I assume yo know the following: (1) Basic Python, (2) Basic linear algebra ideas.</p>
-<p>In general, I would say you need more than basic python and basic linear algebra to become a data analyst, but since I don’t plan to cover statistical inference of any kind, that should be enough. If you plan to do applied statistics, you ideally want to learn linear algebra, calculus, probability theory, and experimental and quasi-experimental research methods. And that may take a year or two.</p>
-<div class="section" id="basic-python-programming">
-<h3>Basic Python programming<a class="headerlink" href="#basic-python-programming" title="Permalink to this headline">¶</a></h3>
-<p>Regarding Python, I will assume you are familiar with:</p>
-<ul class="simple">
-<li><p>Variables</p></li>
-<li><p>Imports and prints</p></li>
-<li><p>Basic Python syntax</p></li>
-<li><p>Data types: string, int, float, bool, and complex</p></li>
-<li><p>Containers: lists, dictionaries, sets, and tuples</p></li>
-<li><p>Functions and Lambda functions</p></li>
-<li><p>Control flow: for loops and while loops; if, elif and else statements</p></li>
-<li><p>Operators:</p>
-<ul>
-<li><p>arithmetic operators (+, -, etc)</p></li>
-<li><p>assignment operators (=, += -=, etc)</p></li>
-<li><p>comparison operators (&gt;, ==, &lt;, etc)</p></li>
-<li><p>logical operators (and, or, not)</p></li>
-<li><p>membership operators(in, not it)</p></li>
-</ul>
-</li>
-</ul>
-<p>That should be enough. If you are not familiar with Python basics, there are many courses out there that will teach you all you need to know if a couple of hours or days. For instance, <a class="reference external" href="https://www.youtube.com/playlist?list=PL-osiE80TeTskrapNbzXhwoFUiLCjGgY7">here</a>, <a class="reference external" href="https://automatetheboringstuff.com/">here</a>, <a class="reference external" href="https://developers.google.com/edu/python/">here</a>, and <a class="reference external" href="https://www.youtube.com/watch?v=rfscVS0vtbw">here</a>.</p>
-</div>
-<div class="section" id="basic-linear-algebra-ideas">
-<h3>Basic linear algebra ideas<a class="headerlink" href="#basic-linear-algebra-ideas" title="Permalink to this headline">¶</a></h3>
-<p>Regarding basic linear algebra, it is good to be familiar with the following ideas:</p>
-<ul class="simple">
-<li><p>Vectors</p></li>
-<li><p>Matrices</p></li>
-<li><p>Coordinate space</p></li>
-<li><p>Linear combinations</p></li>
-</ul>
-<p>Now, more than learning basic linear algebra, it is important to get used to the idea of thinking in terms of manipulating, transforming, and combining vectors that live in some abstract coordinate space. I did write a linear algebra course which goes very deep in the subject that you can find <a class="reference external" href="https://pabloinsente.github.io/intro-linear-algebra">here</a>. I recommend simply searching for the concepts I mentioned before and read about it. Wikipedia it’s also a perfectly fine source when you are in doubt about any concept.</p>
-</div>
-</div>
-<div class="section" id="basic-concepts-in-data-analysis">
-<h2>Basic concepts in data analysis<a class="headerlink" href="#basic-concepts-in-data-analysis" title="Permalink to this headline">¶</a></h2>
-<p>In this section we explore and define several key concepts in data analysis. the explanations will be brief, as the main is to set up the stage for the actual data analysis process. Some concepts will be reviewed in more detail later in the book.</p>
+  <div class="section" id="basic-concepts-in-data-analysis">
+<h1>Basic concepts in data analysis<a class="headerlink" href="#basic-concepts-in-data-analysis" title="Permalink to this headline">¶</a></h1>
+<p>In this section we explore and define several key concepts in data analysis. The explanations will be brief, as the goal is to lay the conceptual foundations for the actual data analysis process. Some concepts will be reviewed in more detail later in the book.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Libraries for this section</span>
@@ -466,7 +232,7 @@
 </div>
 </div>
 <div class="section" id="tabular-data">
-<h3>Tabular data<a class="headerlink" href="#tabular-data" title="Permalink to this headline">¶</a></h3>
+<h2>Tabular data<a class="headerlink" href="#tabular-data" title="Permalink to this headline">¶</a></h2>
 <p>Data comes in many shapes and sizes. However, in the context of data analysis, we usually prefer to work with <strong>tabular data</strong>. Put simply, <strong>tabular data are collections of values placed in some order in a two-dimensional grid</strong>. The horizontal dimension usually represent records, cases, or samples. The vertical dimension usually represent attributes, variables, or features.</p>
 <p>📓  <strong>Tabular data</strong>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Tabular</span> <span class="n">data</span> <span class="n">are</span> <span class="n">collections</span> <span class="n">of</span> <span class="n">values</span> <span class="n">placed</span> <span class="ow">in</span> <span class="n">a</span> <span class="n">two</span><span class="o">-</span><span class="n">dimensional</span> <span class="n">grid</span><span class="o">.</span> <span class="n">The</span> <span class="n">horizontal</span> <span class="n">dimension</span> <span class="n">usually</span> <span class="n">represent</span> <span class="n">records</span><span class="p">,</span> <span class="n">cases</span><span class="p">,</span> <span class="ow">or</span> <span class="n">samples</span><span class="o">.</span> <span class="n">The</span> <span class="n">vertical</span> <span class="n">dimension</span> <span class="n">usually</span> <span class="n">represent</span> <span class="n">attributes</span><span class="p">,</span> <span class="n">variables</span><span class="p">,</span> <span class="ow">or</span> <span class="n">features</span><span class="o">.</span>
@@ -554,13 +320,13 @@
 <p>As you can see, the data structure is clean and simple to understand, just like any spreadsheet. Each row represent one of your friends, and the columns represent their attributes and/or responses.</p>
 </div>
 <div class="section" id="non-tabular-data">
-<h3>Non tabular data<a class="headerlink" href="#non-tabular-data" title="Permalink to this headline">¶</a></h3>
+<h2>Non tabular data<a class="headerlink" href="#non-tabular-data" title="Permalink to this headline">¶</a></h2>
 <p>Not all data comes in tabular form. As the name suggest, any collection of values that is not arranged in a table falls into this category: image data, video data, audio data, documents, website logs, graph data, and others.</p>
 <p>📓  <strong>Non tabular data</strong>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Any</span> <span class="n">data</span> <span class="nb">format</span> <span class="n">that</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">structured</span> <span class="ow">in</span> <span class="n">tabular</span> <span class="n">form</span><span class="o">.</span> <span class="n">Examples</span> <span class="n">are</span><span class="p">:</span> <span class="n">image</span> <span class="n">data</span><span class="p">,</span> <span class="n">video</span> <span class="n">data</span><span class="p">,</span> <span class="n">audio</span> <span class="n">data</span><span class="p">,</span> <span class="n">website</span> <span class="n">logs</span><span class="p">,</span> <span class="ow">and</span> <span class="n">graph</span> <span class="n">data</span><span class="o">.</span>
 </pre></div>
 </div>
-<p>For instance, digital color images are collection of red, green, and blue (RGB) pixels. In addition, you have to consider information about their dimensionality. All together, you need five dimensions to represent an image: red, green, blue, width, and height. Hence, you can’t just fit a JPEG or PNG image into a table.</p>
+<p>For instance, digital color images are collection of red, green, and blue (RGB) pixels. In addition, you have to consider information about their dimensionality. All together, you need five dimensions to represent an image: red, green, blue, width, and height. Hence, you can’t just fit a JPEG or PNG image into a two-dimensional table. There is a kind of mathematical object called <a class="reference external" href="https://en.wikipedia.org/wiki/Tensor">tensor</a> that can be used to represent higher-dimensional objects, yet it is beyond the scope of this book.</p>
 <p>There are <strong>strategies to coerce non tabular data into tabular form</strong>. For instance, a graph with nodes and links can be tabulated as:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -621,12 +387,12 @@
 </table>
 </div></div></div>
 </div>
-<p>Yet, it is not always the case you can coerce non-tabular into tabular data. Not at least in a way that makes sense from a data analysis perspective. In his book I am mostly concerned with tabular data, reason why I won’t touch the non-tabular case moving forward.</p>
+<p>Yet, it is not always the case you can coerce non-tabular into tabular data. Not at least in a way that makes sense from a data analysis perspective. In this book, I am primarily concerned with tabular data, reason why I won’t touch the non-tabular case moving forward.</p>
 </div>
 <div class="section" id="relational-databases">
-<h3>Relational databases<a class="headerlink" href="#relational-databases" title="Permalink to this headline">¶</a></h3>
+<h2>Relational databases<a class="headerlink" href="#relational-databases" title="Permalink to this headline">¶</a></h2>
 <p>Relational databases (RLDB)are closely related to tabular data. The concept of a relational database model was  introduced in 1970 by <a class="reference external" href="https://en.wikipedia.org/wiki/Edgar_F._Codd">Edgar F. Codd</a>, a researcher at IBM.</p>
-<p>We can think in relational databases as generalizations of tabular data objects: as collections of data tables associated in some specific manner, such that the user can operate on multiple tables at once.</p>
+<p>We can think in relational databases as generalizations of tabular data objects: <strong>as collections of data tables associated in some specific manner</strong>, such that the user can operate on multiple tables at once.</p>
 <p>📓  <strong>Relational database</strong>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Collections</span> <span class="n">of</span> <span class="n">data</span> <span class="n">tables</span> <span class="n">associated</span> <span class="ow">in</span> <span class="n">some</span> <span class="n">specific</span> <span class="n">manner</span><span class="p">,</span> <span class="n">such</span> <span class="n">that</span> <span class="n">the</span> <span class="n">user</span> <span class="n">can</span> <span class="n">operate</span> <span class="n">on</span> <span class="n">multiple</span> <span class="n">tables</span> <span class="n">at</span> <span class="n">once</span><span class="o">.</span>
 </pre></div>
@@ -695,7 +461,7 @@
 </table>
 </div></div></div>
 </div>
-<p>Now we can merge the data as needed utilizing the name as “key” as:</p>
+<p>Now we can merge the tables utilizing the name as “key”:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">tabular_data</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">tabular_data_2</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s1">&#39;Name&#39;</span><span class="p">)</span>
@@ -781,11 +547,11 @@
 <p>If you want to learn more about relational databases and data management systems, you can read the original Codd’s paper <a class="reference external" href="https://www.seas.upenn.edu/%7Ezives/03f/cis550/codd.pdf">here</a></p>
 </div>
 <div class="section" id="anatomy-of-a-data-table">
-<h3>Anatomy of a data table<a class="headerlink" href="#anatomy-of-a-data-table" title="Permalink to this headline">¶</a></h3>
+<h2>Anatomy of a data table<a class="headerlink" href="#anatomy-of-a-data-table" title="Permalink to this headline">¶</a></h2>
 <p>Tables will be the object with which we will interact the most. Sometimes is easier to remember concepts by associating them with graphical displays. Below you can find a chart with the many ways in which each section of table is called on different contexts.</p>
-<img src="images/anatomy-table.svg" ></div>
+<img src="images/anatomy-table.svg"></div>
 <div class="section" id="time-series-data">
-<h3>Time series data<a class="headerlink" href="#time-series-data" title="Permalink to this headline">¶</a></h3>
+<h2>Time series data<a class="headerlink" href="#time-series-data" title="Permalink to this headline">¶</a></h2>
 <p>Fun fact: <code class="docutils literal notranslate"><span class="pre">pandas</span></code> derives its name from “<strong>pa</strong>nel <strong>da</strong>ta <strong>s</strong>ystem” as <a class="reference external" href="https://google-code-archive-downloads.storage.googleapis.com/v2/code.google.com/pandas/nyfpug.pdf">its original goal</a> was developing a library to primarily manipulate such kind of data. Panel data happens to be an example of time series data as well. In simple terms, time series are <strong>records collected sequentially over time that usually refer to the same entities</strong> (e.g., people, cities, factories, etc).</p>
 <p>📓  <strong>Time series</strong>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Records</span> <span class="n">collected</span> <span class="n">sequentially</span> <span class="n">over</span> <span class="n">time</span> <span class="n">that</span> <span class="n">usually</span> <span class="n">refer</span> <span class="n">to</span> <span class="n">the</span> <span class="n">same</span> <span class="n">entities</span> <span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">g</span><span class="o">.</span><span class="p">,</span> <span class="n">people</span><span class="p">,</span> <span class="n">cities</span><span class="p">,</span> <span class="n">factories</span><span class="p">,</span> <span class="n">etc</span><span class="p">)</span><span class="o">.</span>
@@ -952,18 +718,217 @@
 </div>
 <p>Now the rows represent the item and the columns the dates. What data organization scheme is better to use will depend on your problem at hand.</p>
 </div>
-</div>
 <div class="section" id="types-of-variables">
 <h2>Types of variables<a class="headerlink" href="#types-of-variables" title="Permalink to this headline">¶</a></h2>
 <p>During my education I have have the opportunity to learn how sociologists, economists, psychologists, neuroscientists, statisticians, and machine learning experts denominate variables or features. As you can imagine, they do not agree on how to name things, as they probably do not talk to each other all that much. What I learned is to better acquire a vocabulary as eclectic as possible to communicate effectively depending on context.</p>
-<p>In this section I group and provide brief definitions of the most common ways to name variables according to the following criteria: (1) the “nature” of the entity to be measured or of the measurement itself, (2) their role in causal processes.</p>
-<p>Continuous, quantitative, numerical, floating point, integer, interval, ratio, discrete
-Ordinal, ranked, ordered
-Categorical, nominal, binary, dummy, time, qualitative</p>
-<p>Dependent and independent
-Endogenous, exogenous
-Experimental/intervention and control/placebo</p>
-<p>Extraneous variables, confounding variables</p>
+<p>In this section, I group and provide brief definitions of the most common ways to name variables according to the following criteria: (1) <strong>the “nature” of the entity</strong> to be measured or of <strong>the type measurement</strong>, (2) <strong>their role in causal processes</strong>.</p>
+<div class="section" id="according-to-measurement-type">
+<h3>According to measurement type<a class="headerlink" href="#according-to-measurement-type" title="Permalink to this headline">¶</a></h3>
+<style type="text/css">
+.tg  {border-collapse:collapse;border-color:#aaa;border-spacing:0;}
+.tg td{background-color:#fff;border-color:#aaa;border-style:solid;border-width:1px;color:#333;
+  font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{background-color:#f38630;border-color:#aaa;border-style:solid;border-width:1px;color:#fff;
+  font-family:Arial, sans-serif;font-size:14px;font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-za9b{background-color:#f97474;border-color:inherit;font-weight:bold;text-align:left;vertical-align:top}
+.tg .tg-vrr5{background-color:#f97474;border-color:inherit;font-family:serif !important;;font-size:100%;font-weight:bold;
+  text-align:left;vertical-align:top}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+@media screen and (max-width: 767px) {.tg {width: auto !important;}.tg col {width: auto !important;}.tg-wrap {overflow-x: auto;-webkit-overflow-scrolling: touch;}}</style>
+<div class="tg-wrap"><table class="tg">
+<tbody>
+  <tr>
+    <td class="tg-vrr5">Variable type</td>
+    <td class="tg-za9b">Definition</td>
+    <td class="tg-za9b">Context</td>
+    <td class="tg-za9b">Example</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Quantitative</td>
+    <td class="tg-0pky">General term refering to any kind of numerical variable, either in the real numbers or in the natural numbers</td>
+    <td class="tg-0pky">General</td>
+    <td class="tg-0pky">Income, Years of education</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Numerical</td>
+    <td class="tg-0pky">General term refering to any kind of numerical variable, either in the real numbers or in the natural numbers</td>
+    <td class="tg-0pky">General</td>
+    <td class="tg-0pky">Income, Speed</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Continuous</td>
+    <td class="tg-0pky">Variable that can take set of real values</td>
+    <td class="tg-0pky">General</td>
+    <td class="tg-0pky">Money, Temperature</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Ordinal</td>
+    <td class="tg-0pky">Variable whose values follow a meaningful order but the gaps between values cannot be quantified</td>
+    <td class="tg-0pky">Mostly statistics</td>
+    <td class="tg-0pky">Social class, Educational levels</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Interval</td>
+    <td class="tg-0pky">Variable whose values follow a meaningful order and where differences betwteen values are meaningful</td>
+    <td class="tg-0pky">Mostly statistics</td>
+    <td class="tg-0pky">Age range, Income bracket</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Ratio</td>
+    <td class="tg-0pky">Variable whose values follow a meaningful order and where differences betwteen values are mathematically meaningful</td>
+    <td class="tg-0pky">Mostly statistics</td>
+    <td class="tg-0pky">Speed, Body mass index</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Int</td>
+    <td class="tg-0pky">Software representation of variables whose values belong to the natural numbers</td>
+    <td class="tg-0pky">Programming, Machine learning</td>
+    <td class="tg-0pky">Any natural number</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Floating point</td>
+    <td class="tg-0pky">Software representation of variables whose values belong to the real numbers</td>
+    <td class="tg-0pky">Programming, Machine learning</td>
+    <td class="tg-0pky">Any real number</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Complex</td>
+    <td class="tg-0pky">Software representation of variables whose values belong to the complex numbers</td>
+    <td class="tg-0pky">Programming, Machine learning</td>
+    <td class="tg-0pky">Any complex number</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Discrete</td>
+    <td class="tg-0pky">Variable where gapst between numbers have the same magnitud, as in natural numbers</td>
+    <td class="tg-0pky">General</td>
+    <td class="tg-0pky">Population, Number of schools</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Qualitative</td>
+    <td class="tg-0pky">General term to refert to variables whose values belong to a predefine set of categories and the where the ordering is not meaningful</td>
+    <td class="tg-0pky">General</td>
+    <td class="tg-0pky">Ethnicity, Nationality, True/False</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Categorical</td>
+    <td class="tg-0pky">General term to refert to variables whose values belong to a predefine set of categories and the where the ordering is not meaningful</td>
+    <td class="tg-0pky">General</td>
+    <td class="tg-0pky">Ethnicity, Religion</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Nominal</td>
+    <td class="tg-0pky">A type of categorical variable whose values belong to a predefine set of categories and the where the ordering is not meaningful</td>
+    <td class="tg-0pky">Mostly statistics</td>
+    <td class="tg-0pky">Nationality, Political affiliation</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Binary</td>
+    <td class="tg-0pky">A type of categorical variable whose values are restricted to two categories and the where the ordering is not meaningful</td>
+    <td class="tg-0pky">General</td>
+    <td class="tg-0pky">True/False, Sold/Not sold</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Dummy</td>
+    <td class="tg-0pky">An alternative way to refer to binary variables</td>
+    <td class="tg-0pky">Mostly statistics</td>
+    <td class="tg-0pky">True/False, Sold/Not sold</td>
+  </tr>
+</tbody>
+</table></div></div>
+<div class="section" id="according-to-their-role-in-causal-processes">
+<h3>According to their role in causal processes<a class="headerlink" href="#according-to-their-role-in-causal-processes" title="Permalink to this headline">¶</a></h3>
+<style type="text/css">
+.tg  {border-collapse:collapse;border-color:#aaa;border-spacing:0;}
+.tg td{background-color:#fff;border-color:#aaa;border-style:solid;border-width:0px;color:#333;
+  font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{background-color:#f38630;border-color:#aaa;border-style:solid;border-width:0px;color:#fff;
+  font-family:Arial, sans-serif;font-size:14px;font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-6zme{background-color:#f97474;font-weight:bold;text-align:left;vertical-align:top}
+.tg .tg-zzh6{background-color:#f97474;border-color:#f97474;font-weight:bold;text-align:left;vertical-align:top}
+.tg .tg-0lax{text-align:left;vertical-align:top}
+@media screen and (max-width: 767px) {.tg {width: auto !important;}.tg col {width: auto !important;}.tg-wrap {overflow-x: auto;-webkit-overflow-scrolling: touch;}}</style>
+<div class="tg-wrap"><table class="tg">
+<tbody>
+  <tr>
+    <td class="tg-6zme">Variable type</td>
+    <td class="tg-6zme">Definition</td>
+    <td class="tg-zzh6">Context</td>
+    <td class="tg-6zme">Example</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">Dependent</td>
+    <td class="tg-0lax">Variable whose values depend on the values or "impact" of another variable</td>
+    <td class="tg-0lax">General, Statistics</td>
+    <td class="tg-0lax">Raise of temerature (dependent) in response to&nbsp;&nbsp;greenhouse gases emisions</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">Independent</td>
+    <td class="tg-0lax">Variable whose values "impact" of another variable and that are independent of any other variable in a model</td>
+    <td class="tg-0lax">General, Statistics</td>
+    <td class="tg-0lax">Raise of temerature (dependent) in response to&nbsp;&nbsp;greenhouse gases emisions (independent)</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">Endogenous</td>
+    <td class="tg-0lax">Variable whose values are determined outside a model. Similar to dependent variable.</td>
+    <td class="tg-0lax">Econometrics</td>
+    <td class="tg-0lax">Stock market prices and expectations among investors in the stock market</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">Exogenous</td>
+    <td class="tg-0lax">Variable whose values are determined inside a model. Similar to independent variable.</td>
+    <td class="tg-0lax">Econometrics</td>
+    <td class="tg-0lax">COVID-10 pandemic impacting the stock market</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">Experimental</td>
+    <td class="tg-0lax">Variables whose values are "exogenous" and/or "independent' and that aim to causaly impact some process</td>
+    <td class="tg-0lax">Experimental research</td>
+    <td class="tg-0lax">COVID-19 vaccine in a clinical trial</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">Intervention</td>
+    <td class="tg-0lax">Variables whose values are "exogenous" and/or "independent' and that aim to causaly impact some process</td>
+    <td class="tg-0lax">Experimental research</td>
+    <td class="tg-0lax">COVID-19 vaccine in a clinical trial</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">Control</td>
+    <td class="tg-0lax">Variable that is measured in a study but that is not the main focus of interst, usually with the purpose of eliminate its influence as a causal factor</td>
+    <td class="tg-0lax">Experimental research</td>
+    <td class="tg-0lax">Age and gender of participants in a clinical trial</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">Placebo</td>
+    <td class="tg-0lax">Variable intendent to not impact the primary outcome of interest in a study</td>
+    <td class="tg-0lax">Experimental research, Medical research</td>
+    <td class="tg-0lax">Sugar pill administered to participants in the control group</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">Extraneous</td>
+    <td class="tg-0lax">Variables that may inadvertently impact the outcome of process or experiment</td>
+    <td class="tg-0lax">General</td>
+    <td class="tg-0lax">Age and gender of participants in a clinical trial</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">Confounding</td>
+    <td class="tg-0lax">Variables that may inadvertently impact the outcome of process or experiment</td>
+    <td class="tg-0lax">General, Statistics</td>
+    <td class="tg-0lax">Age and gender of participants in a clinical trial</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">Mediator</td>
+    <td class="tg-0lax">Variable that links or intervene in the relationship between two or more variables</td>
+    <td class="tg-0lax">Statistics</td>
+    <td class="tg-0lax">SES as mediator of ZIP code and educational outcomes</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">Moderator</td>
+    <td class="tg-0lax">Variable that amplifies or reduces the impact of an independent variable ontro a dependent vriable</td>
+    <td class="tg-0lax">Statistics</td>
+    <td class="tg-0lax">Teachers (moderator) improving students learning outcomes</td>
+  </tr>
+</tbody>
+</table></div></div>
 </div>
 </div>
 
@@ -976,6 +941,7 @@ Experimental/intervention and control/placebo</p>
     
     <div class='prev-next-bottom'>
         
+    <a class='left-prev' id="prev-link" href="1-intro.html" title="previous page">Introduction to data analysis with Python</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">

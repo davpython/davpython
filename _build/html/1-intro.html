@@ -1,0 +1,415 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Introduction to data analysis with Python &#8212; Data Analysis and Visualization with Python</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/jupyter-sphinx.css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/sphinx-book-theme.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/mystnb.js"></script>
+    <script src="_static/sphinx-book-theme.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
+    <link rel="author" title="About these documents" href="about.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Basic concepts in data analysis" href="2-basic-concepts.html" />
+    <link rel="prev" title="Book Contents" href="content.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="index.html">
+  
+  <img src="_static/logo-book-2-small.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Data Analysis and Visualization with Python</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="welcome.html">
+   Welcome
+  </a>
+ </li>
+</ul>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="about.html">
+   About
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="scope.html">
+   Book Scope
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="content.html">
+   Book Contents
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Introduction to data analysis with Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="2-basic-concepts.html">
+   Basic concepts in data analysis
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/1-intro.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> On this page
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-is-data-analysis">
+   What is data analysis
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-analysis-with-python">
+   Data analysis with Python
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-python-data-analysis-toolbox">
+   The Python data analysis toolbox
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#numpy">
+     NumPy
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pandas">
+     Pandas
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#scipy">
+     SciPy
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#statsmodels">
+     Statsmodels
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pymc3">
+     PyMC3
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#scikit-learn">
+     Scikit-Learn
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#matplotlib">
+     Matplotlib
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#seaborn">
+     Seaborn
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#altair">
+     Altair
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#bokeh">
+     Bokeh
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#prerequisites">
+   Prerequisites
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#basic-python-programming">
+     Basic Python programming
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#basic-linear-algebra-ideas">
+     Basic linear algebra ideas
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+        </nav>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="introduction-to-data-analysis-with-python">
+<h1>Introduction to data analysis with Python<a class="headerlink" href="#introduction-to-data-analysis-with-python" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="what-is-data-analysis">
+<h2>What is data analysis<a class="headerlink" href="#what-is-data-analysis" title="Permalink to this headline">¶</a></h2>
+<p>Data analysis is a endeavor with fuzzy boundaries. Some people constrain data analysis to exploratory data analysis and data visualization. Others include hypothesis testing and statistical inference. And some even incorporate machine learning techniques like dimensionality reduction and clustering.</p>
+<p>Here is what, according to John W. Tukey in “<a class="reference external" href="https://projecteuclid.org/download/pdf_1/euclid.aoms/1177704711">The Future of Data Analysis</a>”, one of the leading figures in data analysis and statistics in the XX century, can be included as part of the data analysis process:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;Procedures for analyzing data, techniques for interpreting the results of such procedures, ways of planning the gathering of data to make its analysis easier, more precise or more accurate, and all the machinery and results of (mathematical) statistics which apply to analyzing data.&quot;</span>
+</pre></div>
+</div>
+<p>I personally agree with Tukey. In my 10 years of experience analysis data, I have done such wide variety of things to obtain an answer to a question that I cannot constrain the data analysis process to a fixed subset of techniques. Because, in my view, the heart of data analysis is precisely that: <strong>to utilize a plethora of computational, mathematical, and visualization techniques, to answer meaningful questions based on data</strong>.</p>
+<p>Data analysis is often associated with a subset of roles in the Data Science space: data visualization specialists, business analysts, quantitative analysts, and a few others. Yet, the true i that <strong>there is no endeavor in Data Science that does not rely in data analysis to some extent</strong>. Machine learning researchers, machine learning engineers, data architects, big data engineers, social science researchers, biological science researchers, and pretty much any professional working with data, will need to ingest, clean, transform, explore, visualize, and interrogate data at one point or another.</p>
+<p>Following Tukey line of reasoning, data analysis must be regarded as a foundational skill for any professional and/or researcher that relies on data to accomplish its goals.</p>
+</div>
+<div class="section" id="data-analysis-with-python">
+<h2>Data analysis with Python<a class="headerlink" href="#data-analysis-with-python" title="Permalink to this headline">¶</a></h2>
+<p>Due to the association of data analysis with roles as business analyst and quantitative analysts, Python is sometimes regarded as a secondary tool, with programming languages as R, Scala, SAS, or SPSS, as primary tools instead. From that perspective, it is fair to ask why to spend time learning Python for data analysis instead of R and SPSS. I have several answers for that coming from different angles:</p>
+<ol class="simple">
+<li><p>You probably need to learn more than one programming language as every language has their own strengths and weaknesses. Adding Python to your toolbox will just make you a better analysis.</p></li>
+<li><p>I hear you: “There is just so much time in a day. I cannot learn them all!”. Let’s say you have time for learning a single programming language. Why Python?: (1) It’s free, (2) It’s easy to learn and use, (3) It has a large and constantly growing ecosystem of libraries to accomplish any data analysis task you may face, (4) It’s in high demand.</p></li>
+<li><p>In addition to offering all the necessary tools for what is traditionally considered data analysis, Python is a the leader in the field of machine learning and artificial intelligence, which can expand your toolbox and skills even further.</p></li>
+</ol>
+<p>The above does not mean you will never need to utilize other programming languages for some task, you probably will, yet Python offers a solid base from which to approach all your data analysis challenges.</p>
+</div>
+<div class="section" id="the-python-data-analysis-toolbox">
+<h2>The Python data analysis toolbox<a class="headerlink" href="#the-python-data-analysis-toolbox" title="Permalink to this headline">¶</a></h2>
+<p>The Python data science and scientific computing ecosystem is vast. The <a class="reference external" href="https://numfocus.org/">NUMFOCUS Foundation</a> aggregates and support <a class="reference external" href="https://numfocus.org/sponsored-projects">several projects</a> in the field, so it’s a good place to start and pay attention to.</p>
+<p>I do not pretend to cover all the libraries out there, just because they are too many. Instead,  I’ll briefly mention a selection of the most popular and the ones you probably will utilize the most.</p>
+<div class="section" id="numpy">
+<h3>NumPy<a class="headerlink" href="#numpy" title="Permalink to this headline">¶</a></h3>
+<p>It is no exaggeration to say that <a class="reference external" href="https://numpy.org/">NumPy</a> is at the core of the entire scientific computing Python ecosystem, both as a standalone package for numerical computation and as the engine behind most data science packages.</p>
+<p>NumPy is a package for array-like or matrix-like high-performance computation. Its “engine” is written in C, meaning that NumPy utilized “in the background” pre-compiled C code to perform computations.</p>
+<p>Although it is not our  main tool, we will use NumPy at different parts of the data analysis process.</p>
+<p>An alternative to NumPy is <a class="reference external" href="http://xarray.pydata.org/en/stable/">Xarray</a>, which introduces labels to multidimensional arrays.</p>
+</div>
+<div class="section" id="pandas">
+<h3>Pandas<a class="headerlink" href="#pandas" title="Permalink to this headline">¶</a></h3>
+<p>Given its versatility and easy to use interface, <a class="reference external" href="https://pandas.pydata.org/">pandas</a> has become one of the main tools in the data analysis toolkit. In the Python ecosystem, it is regarded as the <strong>main data wrangling library by far</strong>. In short, pandas provides objects and methods to: <strong>ingest, clean, transform, explore, and output datasets from all sizes</strong>. It can easily take care of datasets in order of millions of datapoints or several gigabytes, replacing -to some extent- the need for “big data” solutions like <a class="reference external" href="https://hadoop.apache.org/">Hadoop</a> or <a class="reference external" href="https://spark.apache.org/">Spark</a>.</p>
+<p>The pandas library reach its full potential when used in tandem with libraries like NumPy, Scipy, Matplotlib, and others. In this sense, pandas is “at the core” of the data analysis process, reason why we will devote more time to pandas than to any other library in this course.</p>
+</div>
+<div class="section" id="scipy">
+<h3>SciPy<a class="headerlink" href="#scipy" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="https://www.scipy.org/">SciPy</a> is both a library and ecosystem. Here we refer to the <a class="reference external" href="https://www.scipy.org/scipylib/index.html">SciPy library</a>. The goal of Scipy is to provide several easy to use objects and methods for numerical computation, optimization, linear algebra, and statistics.</p>
+</div>
+<div class="section" id="statsmodels">
+<h3>Statsmodels<a class="headerlink" href="#statsmodels" title="Permalink to this headline">¶</a></h3>
+<p>For a long time, people working in statistical analysis could not find a Python-based user-friendly solution for statistics, so they mainly utilized R, SPSS, SAS, and other programming languages.</p>
+<p>The <a class="reference external" href="https://www.statsmodels.org/stable/index.html">Statsmodels</a> package takes care of such a need by providing a series of classes and methods for statistical modeling, ranging from basic hypothesis testing to complex linear mixed effects models. Its interface is based on R, making it easy to adopt for R users.</p>
+</div>
+<div class="section" id="pymc3">
+<h3>PyMC3<a class="headerlink" href="#pymc3" title="Permalink to this headline">¶</a></h3>
+<p>In recent years Bayesian statistics have been adopted as an alternative to traditional frequentist statistics. PyMC3 is a Python based library for Bayesian statistical modeling and probabilistic machine learning. I do not plan to cover Bayesian statistics in this course, yet it is useful know such a library exist.</p>
+</div>
+<div class="section" id="scikit-learn">
+<h3>Scikit-Learn<a class="headerlink" href="#scikit-learn" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="https://scikit-learn.org/stable/">Sckit-learn</a> it is a library for machine learning and predictive analytics, and one of the most popular libraries in the data science ecosystem. Even though this is not a machine learning course, we will make use of sckit-learn from time to time as it offers several convenient functions for common data analysis tasks like clustering and dimensionality reduction.</p>
+</div>
+<div class="section" id="matplotlib">
+<h3>Matplotlib<a class="headerlink" href="#matplotlib" title="Permalink to this headline">¶</a></h3>
+<p>Python has a strong data visualization ecosystem, and <a class="reference external" href="https://matplotlib.org/">Matplotlib</a> is at the center of it. It is the most mature, stable, flexible, and versatile data visualization library in Python. Although it is designed with 2-dimensional graphics in mind, it can also handle 3-dimensional and interactive graphics. It follows a -mostly- imperative interface, meaning the user has to explicitly declare most details of the chart which makes it a bit verbose at times.</p>
+<p>Matplotlib, and the rest of the Python data science stack, became famous when <a class="reference external" href="https://www.blog.pythonlibrary.org/2019/04/11/python-used-to-take-photo-of-black-hole/">the first images of a black hole</a> were produced with this library.</p>
+</div>
+<div class="section" id="seaborn">
+<h3>Seaborn<a class="headerlink" href="#seaborn" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="https://seaborn.pydata.org/">Seaborn</a> was developed as a high-level interface for Matplotlib with the aim to simplify chart creation for common tasks. Charts that take a couple of dozens of lines in Matplotlib may be produced with one or two lines in Seaborn. The trade off offered by Seaborn is less control regarding the display and aesthetics, for a simpler to use interface for fast development.</p>
+</div>
+<div class="section" id="altair">
+<h3>Altair<a class="headerlink" href="#altair" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="https://altair-viz.github.io/">Altair</a> is another data visualization library for Python, probably the younger from the lot. What distinguishes Altair from other libraries is its “declarative approach” to statistical graphics, based on the so-called <a class="reference external" href="https://rb.gy/yb78qp">grammar of graphics</a>. With Matplotlib you focus in the “how” to put things in place, whereas with Altair you focus in the “what”.</p>
+<p>Altair is primarily aimed to work with tabular data, particularly with the pandas DataFrame object. The logic behind Altair is to utilize a elegant and consistent syntax that combines a series of graphical primitives with a series of graphical combinatorial rules. Altair trade off is similar to Seaborn: less control for simplicity and fast development.</p>
+<p>I personally like utilizing Altair as I believe the mental model that provides is exceptionally good, so I will Altair cover in this course rather than Seaborn.</p>
+</div>
+<div class="section" id="bokeh">
+<h3>Bokeh<a class="headerlink" href="#bokeh" title="Permalink to this headline">¶</a></h3>
+<p>Python also provide libraries for web-based interactive data visualization. All those cool interactive charts you find online in the places websites the New York Times can be created with Libraries like <a class="reference external" href="https://docs.bokeh.org/en/latest/index.html">Bokeh</a>. Bokeh provides an elegant and concise interface for interactive graphics, and can easily handle large or streaming datasets online.</p>
+<p>An alternative to Bokeh is <a class="reference external" href="https://plotly.com/">Plotly</a>, which has the advantage of working with multiple programming languages.</p>
+</div>
+</div>
+<div class="section" id="prerequisites">
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h2>
+<p>Some people start their data analysis learning path with little more than high-school level mathematics and end up being highly successful. For the purposes of this courses, in addition to high-school level mathematics, I assume yo know the following: (1) Basic Python, (2) Basic linear algebra ideas.</p>
+<p>In general, I would say you need more than basic python and basic linear algebra to become a data analyst, but since I don’t plan to cover statistical inference of any kind, that should be enough. If you plan to do applied statistics, you ideally want to learn linear algebra, calculus, probability theory, and experimental and quasi-experimental research methods. And that may take a year or two.</p>
+<div class="section" id="basic-python-programming">
+<h3>Basic Python programming<a class="headerlink" href="#basic-python-programming" title="Permalink to this headline">¶</a></h3>
+<p>Regarding Python, I will assume you are familiar with:</p>
+<ul class="simple">
+<li><p>Variables</p></li>
+<li><p>Imports and prints</p></li>
+<li><p>Basic Python syntax</p></li>
+<li><p>Data types: string, int, float, bool, and complex</p></li>
+<li><p>Containers: lists, dictionaries, sets, and tuples</p></li>
+<li><p>Functions and Lambda functions</p></li>
+<li><p>Control flow: for loops and while loops; if, elif and else statements</p></li>
+<li><p>Operators:</p>
+<ul>
+<li><p>arithmetic operators (+, -, etc)</p></li>
+<li><p>assignment operators (=, += -=, etc)</p></li>
+<li><p>comparison operators (&gt;, ==, &lt;, etc)</p></li>
+<li><p>logical operators (and, or, not)</p></li>
+<li><p>membership operators(in, not it)</p></li>
+</ul>
+</li>
+</ul>
+<p>That should be enough. If you are not familiar with Python basics, there are many courses out there that will teach you all you need to know if a couple of hours or days. For instance, <a class="reference external" href="https://www.youtube.com/playlist?list=PL-osiE80TeTskrapNbzXhwoFUiLCjGgY7">here</a>, <a class="reference external" href="https://automatetheboringstuff.com/">here</a>, <a class="reference external" href="https://developers.google.com/edu/python/">here</a>, and <a class="reference external" href="https://www.youtube.com/watch?v=rfscVS0vtbw">here</a>.</p>
+</div>
+<div class="section" id="basic-linear-algebra-ideas">
+<h3>Basic linear algebra ideas<a class="headerlink" href="#basic-linear-algebra-ideas" title="Permalink to this headline">¶</a></h3>
+<p>Regarding basic linear algebra, it is good to be familiar with the following ideas:</p>
+<ul class="simple">
+<li><p>Vectors</p></li>
+<li><p>Matrices</p></li>
+<li><p>Coordinate space</p></li>
+<li><p>Linear combinations</p></li>
+</ul>
+<p>Now, more than learning basic linear algebra, it is important to get used to the idea of thinking in terms of manipulating, transforming, and combining vectors that live in some abstract coordinate space. I did write a linear algebra course which goes very deep in the subject that you can find <a class="reference external" href="https://pabloinsente.github.io/intro-linear-algebra">here</a>. I recommend simply searching for the concepts I mentioned before and read about it. Wikipedia it’s also a perfectly fine source when you are in doubt about any concept.</p>
+</div>
+</div>
+</div>
+
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="content.html" title="previous page">Book Contents</a>
+    <a class='right-next' id="next-link" href="2-basic-concepts.html" title="next page">Basic concepts in data analysis</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Pablo Caceres<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="_static/js/index.js"></script>
+    
+  </body>
+</html>
