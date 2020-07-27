@@ -1,4 +1,4 @@
-# Introduction to data analysis with Python
+# 1. Introduction to data analysis with Python
 
 ## What is data analysis
 
@@ -6,9 +6,7 @@ Data analysis is a endeavor with fuzzy boundaries. Some people constrain data an
 
 Here is what, according to John W. Tukey in "[The Future of Data Analysis](https://projecteuclid.org/download/pdf_1/euclid.aoms/1177704711)", one of the leading figures in data analysis and statistics in the XX century, can be included as part of the data analysis process: 
 
-```
-"Procedures for analyzing data, techniques for interpreting the results of such procedures, ways of planning the gathering of data to make its analysis easier, more precise or more accurate, and all the machinery and results of (mathematical) statistics which apply to analyzing data."
-```
+> "Procedures for analyzing data, techniques for interpreting the results of such procedures, ways of planning the gathering of data to make its analysis easier, more precise or more accurate, and all the machinery and results of (mathematical) statistics which apply to analyzing data."
 
 I personally agree with Tukey. In my 10 years of experience analysis data, I have done such wide variety of things to obtain an answer to a question that I cannot constrain the data analysis process to a fixed subset of techniques. Because, in my view, the heart of data analysis is precisely that: **to utilize a plethora of computational, mathematical, and visualization techniques, to answer meaningful questions based on data**. 
 

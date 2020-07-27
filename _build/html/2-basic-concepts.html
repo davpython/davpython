@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>Basic concepts in data analysis &#8212; Data Analysis and Visualization with Python</title>
+    <title>2. Basic concepts in data analysis &#8212; Data Analysis and Visualization with Python</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
     <link href="_static/css/index.css" rel="stylesheet">
     <link rel="stylesheet" href="_static/sphinx-book-theme.css" type="text/css" />
@@ -31,7 +31,7 @@
     <link rel="author" title="About these documents" href="about.html" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="Introduction to data analysis with Python" href="1-intro.html" />
+    <link rel="prev" title="1. Introduction to data analysis with Python" href="1-intro.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="docsearch:language" content="en">
@@ -89,12 +89,12 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="1-intro.html">
-   Introduction to data analysis with Python
+   1. Introduction to data analysis with Python
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Basic concepts in data analysis
+   2. Basic concepts in data analysis
   </a>
  </li>
 </ul>
@@ -220,7 +220,7 @@
               <div>
                 
   <div class="section" id="basic-concepts-in-data-analysis">
-<h1>Basic concepts in data analysis<a class="headerlink" href="#basic-concepts-in-data-analysis" title="Permalink to this headline">¶</a></h1>
+<h1>2. Basic concepts in data analysis<a class="headerlink" href="#basic-concepts-in-data-analysis" title="Permalink to this headline">¶</a></h1>
 <p>In this section we explore and define several key concepts in data analysis. The explanations will be brief, as the goal is to lay the conceptual foundations for the actual data analysis process. Some concepts will be reviewed in more detail later in the book.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -235,9 +235,9 @@
 <h2>Tabular data<a class="headerlink" href="#tabular-data" title="Permalink to this headline">¶</a></h2>
 <p>Data comes in many shapes and sizes. However, in the context of data analysis, we usually prefer to work with <strong>tabular data</strong>. Put simply, <strong>tabular data are collections of values placed in some order in a two-dimensional grid</strong>. The horizontal dimension usually represent records, cases, or samples. The vertical dimension usually represent attributes, variables, or features.</p>
 <p>📓  <strong>Tabular data</strong>:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Tabular</span> <span class="n">data</span> <span class="n">are</span> <span class="n">collections</span> <span class="n">of</span> <span class="n">values</span> <span class="n">placed</span> <span class="ow">in</span> <span class="n">a</span> <span class="n">two</span><span class="o">-</span><span class="n">dimensional</span> <span class="n">grid</span><span class="o">.</span> <span class="n">The</span> <span class="n">horizontal</span> <span class="n">dimension</span> <span class="n">usually</span> <span class="n">represent</span> <span class="n">records</span><span class="p">,</span> <span class="n">cases</span><span class="p">,</span> <span class="ow">or</span> <span class="n">samples</span><span class="o">.</span> <span class="n">The</span> <span class="n">vertical</span> <span class="n">dimension</span> <span class="n">usually</span> <span class="n">represent</span> <span class="n">attributes</span><span class="p">,</span> <span class="n">variables</span><span class="p">,</span> <span class="ow">or</span> <span class="n">features</span><span class="o">.</span>
-</pre></div>
-</div>
+<blockquote>
+<div><p>Tabular data are collections of values placed in a two-dimensional grid. The horizontal dimension usually represent records, cases, or samples. The vertical dimension usually represent attributes, variables, or features.</p>
+</div></blockquote>
 <p>Imagine you decide to make a survey among your friends asking how much they enjoyed each of the five <a class="reference external" href="https://en.wikipedia.org/wiki/List_of_Naruto_episodes">Naruto’s seasons</a>. Let’s build a table with their hypothetical responses. There is no need for you to understand the <code class="docutils literal notranslate"><span class="pre">pandas</span></code> code, just the output.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -323,9 +323,9 @@
 <h2>Non tabular data<a class="headerlink" href="#non-tabular-data" title="Permalink to this headline">¶</a></h2>
 <p>Not all data comes in tabular form. As the name suggest, any collection of values that is not arranged in a table falls into this category: image data, video data, audio data, documents, website logs, graph data, and others.</p>
 <p>📓  <strong>Non tabular data</strong>:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Any</span> <span class="n">data</span> <span class="nb">format</span> <span class="n">that</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">structured</span> <span class="ow">in</span> <span class="n">tabular</span> <span class="n">form</span><span class="o">.</span> <span class="n">Examples</span> <span class="n">are</span><span class="p">:</span> <span class="n">image</span> <span class="n">data</span><span class="p">,</span> <span class="n">video</span> <span class="n">data</span><span class="p">,</span> <span class="n">audio</span> <span class="n">data</span><span class="p">,</span> <span class="n">website</span> <span class="n">logs</span><span class="p">,</span> <span class="ow">and</span> <span class="n">graph</span> <span class="n">data</span><span class="o">.</span>
-</pre></div>
-</div>
+<blockquote>
+<div><p>Any data format that is not structured in tabular form. Examples are: image data, video data, audio data, website logs, and graph data.</p>
+</div></blockquote>
 <p>For instance, digital color images are collection of red, green, and blue (RGB) pixels. In addition, you have to consider information about their dimensionality. All together, you need five dimensions to represent an image: red, green, blue, width, and height. Hence, you can’t just fit a JPEG or PNG image into a two-dimensional table. There is a kind of mathematical object called <a class="reference external" href="https://en.wikipedia.org/wiki/Tensor">tensor</a> that can be used to represent higher-dimensional objects, yet it is beyond the scope of this book.</p>
 <p>There are <strong>strategies to coerce non tabular data into tabular form</strong>. For instance, a graph with nodes and links can be tabulated as:</p>
 <div class="cell docutils container">
@@ -394,9 +394,9 @@
 <p>Relational databases (RLDB)are closely related to tabular data. The concept of a relational database model was  introduced in 1970 by <a class="reference external" href="https://en.wikipedia.org/wiki/Edgar_F._Codd">Edgar F. Codd</a>, a researcher at IBM.</p>
 <p>We can think in relational databases as generalizations of tabular data objects: <strong>as collections of data tables associated in some specific manner</strong>, such that the user can operate on multiple tables at once.</p>
 <p>📓  <strong>Relational database</strong>:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Collections</span> <span class="n">of</span> <span class="n">data</span> <span class="n">tables</span> <span class="n">associated</span> <span class="ow">in</span> <span class="n">some</span> <span class="n">specific</span> <span class="n">manner</span><span class="p">,</span> <span class="n">such</span> <span class="n">that</span> <span class="n">the</span> <span class="n">user</span> <span class="n">can</span> <span class="n">operate</span> <span class="n">on</span> <span class="n">multiple</span> <span class="n">tables</span> <span class="n">at</span> <span class="n">once</span><span class="o">.</span>
-</pre></div>
-</div>
+<blockquote>
+<div><p>Collections of data tables associated in some specific manner, such that the user can operate on multiple tables at once.</p>
+</div></blockquote>
 <p>Let’s say that you do an additional survey among your friends, one about their food preferences. Since The previous one was about Anime, you do not want to put all the data in the same table. What you can do is to create a new table with the data collected from the new survey, and to define a way to associate the contents from both surveys. Since “Name” is in both tables, it is the logical option to use as a “key” to link both tables. Suppose your new table looks like this:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -554,9 +554,9 @@
 <h2>Time series data<a class="headerlink" href="#time-series-data" title="Permalink to this headline">¶</a></h2>
 <p>Fun fact: <code class="docutils literal notranslate"><span class="pre">pandas</span></code> derives its name from “<strong>pa</strong>nel <strong>da</strong>ta <strong>s</strong>ystem” as <a class="reference external" href="https://google-code-archive-downloads.storage.googleapis.com/v2/code.google.com/pandas/nyfpug.pdf">its original goal</a> was developing a library to primarily manipulate such kind of data. Panel data happens to be an example of time series data as well. In simple terms, time series are <strong>records collected sequentially over time that usually refer to the same entities</strong> (e.g., people, cities, factories, etc).</p>
 <p>📓  <strong>Time series</strong>:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Records</span> <span class="n">collected</span> <span class="n">sequentially</span> <span class="n">over</span> <span class="n">time</span> <span class="n">that</span> <span class="n">usually</span> <span class="n">refer</span> <span class="n">to</span> <span class="n">the</span> <span class="n">same</span> <span class="n">entities</span> <span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">g</span><span class="o">.</span><span class="p">,</span> <span class="n">people</span><span class="p">,</span> <span class="n">cities</span><span class="p">,</span> <span class="n">factories</span><span class="p">,</span> <span class="n">etc</span><span class="p">)</span><span class="o">.</span>
-</pre></div>
-</div>
+<blockquote>
+<div><p>Records collected sequentially over time that usually refer to the same entities (e.g., people, cities, factories, etc).</p>
+</div></blockquote>
 <p>Examples of time series data:</p>
 <ul class="simple">
 <li><p>Monthly hours of sunlight in a city</p></li>
@@ -731,14 +731,12 @@
 .tg th{background-color:#f38630;border-color:#aaa;border-style:solid;border-width:1px;color:#fff;
   font-family:Arial, sans-serif;font-size:14px;font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
 .tg .tg-za9b{background-color:#f97474;border-color:inherit;font-weight:bold;text-align:left;vertical-align:top}
-.tg .tg-vrr5{background-color:#f97474;border-color:inherit;font-family:serif !important;;font-size:100%;font-weight:bold;
-  text-align:left;vertical-align:top}
 .tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
 @media screen and (max-width: 767px) {.tg {width: auto !important;}.tg col {width: auto !important;}.tg-wrap {overflow-x: auto;-webkit-overflow-scrolling: touch;}}</style>
 <div class="tg-wrap"><table class="tg">
 <tbody>
   <tr>
-    <td class="tg-vrr5">Variable type</td>
+    <td class="tg-za9b">Variable type</td>
     <td class="tg-za9b">Definition</td>
     <td class="tg-za9b">Context</td>
     <td class="tg-za9b">Example</td>
@@ -941,7 +939,7 @@
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="1-intro.html" title="previous page">Introduction to data analysis with Python</a>
+    <a class='left-prev' id="prev-link" href="1-intro.html" title="previous page">1. Introduction to data analysis with Python</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">

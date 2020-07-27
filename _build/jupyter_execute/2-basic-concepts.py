@@ -1,4 +1,4 @@
-# Basic concepts in data analysis
+# 2. Basic concepts in data analysis
 
 In this section we explore and define several key concepts in data analysis. The explanations will be brief, as the goal is to lay the conceptual foundations for the actual data analysis process. Some concepts will be reviewed in more detail later in the book.
 
@@ -11,9 +11,7 @@ import pandas as pd
 Data comes in many shapes and sizes. However, in the context of data analysis, we usually prefer to work with **tabular data**. Put simply, **tabular data are collections of values placed in some order in a two-dimensional grid**. The horizontal dimension usually represent records, cases, or samples. The vertical dimension usually represent attributes, variables, or features.
 
 📓  **Tabular data**: 
-```
-Tabular data are collections of values placed in a two-dimensional grid. The horizontal dimension usually represent records, cases, or samples. The vertical dimension usually represent attributes, variables, or features.
-```
+>Tabular data are collections of values placed in a two-dimensional grid. The horizontal dimension usually represent records, cases, or samples. The vertical dimension usually represent attributes, variables, or features.
 
 Imagine you decide to make a survey among your friends asking how much they enjoyed each of the five [Naruto's seasons](https://en.wikipedia.org/wiki/List_of_Naruto_episodes). Let's build a table with their hypothetical responses. There is no need for you to understand the `pandas` code, just the output.
 
@@ -35,9 +33,7 @@ As you can see, the data structure is clean and simple to understand, just like 
 Not all data comes in tabular form. As the name suggest, any collection of values that is not arranged in a table falls into this category: image data, video data, audio data, documents, website logs, graph data, and others. 
 
 📓  **Non tabular data**: 
-```
-Any data format that is not structured in tabular form. Examples are: image data, video data, audio data, website logs, and graph data.
-```
+> Any data format that is not structured in tabular form. Examples are: image data, video data, audio data, website logs, and graph data.
 
 For instance, digital color images are collection of red, green, and blue (RGB) pixels. In addition, you have to consider information about their dimensionality. All together, you need five dimensions to represent an image: red, green, blue, width, and height. Hence, you can't just fit a JPEG or PNG image into a two-dimensional table. There is a kind of mathematical object called [tensor](https://en.wikipedia.org/wiki/Tensor) that can be used to represent higher-dimensional objects, yet it is beyond the scope of this book.
 
@@ -60,9 +56,7 @@ Relational databases (RLDB)are closely related to tabular data. The concept of a
 We can think in relational databases as generalizations of tabular data objects: **as collections of data tables associated in some specific manner**, such that the user can operate on multiple tables at once. 
 
 📓  **Relational database**: 
-```
-Collections of data tables associated in some specific manner, such that the user can operate on multiple tables at once.
-```
+>Collections of data tables associated in some specific manner, such that the user can operate on multiple tables at once.
 
 Let's say that you do an additional survey among your friends, one about their food preferences. Since The previous one was about Anime, you do not want to put all the data in the same table. What you can do is to create a new table with the data collected from the new survey, and to define a way to associate the contents from both surveys. Since "Name" is in both tables, it is the logical option to use as a "key" to link both tables. Suppose your new table looks like this:
 
@@ -94,9 +88,7 @@ Fun fact: `pandas` derives its name from "**pa**nel **da**ta **s**ystem" as [its
 
 
 📓  **Time series**: 
-```
-Records collected sequentially over time that usually refer to the same entities (e.g., people, cities, factories, etc).
-```
+> Records collected sequentially over time that usually refer to the same entities (e.g., people, cities, factories, etc).
 
 Examples of time series data:
 
@@ -142,14 +134,12 @@ In this section, I group and provide brief definitions of the most common ways t
 .tg th{background-color:#f38630;border-color:#aaa;border-style:solid;border-width:1px;color:#fff;
   font-family:Arial, sans-serif;font-size:14px;font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
 .tg .tg-za9b{background-color:#f97474;border-color:inherit;font-weight:bold;text-align:left;vertical-align:top}
-.tg .tg-vrr5{background-color:#f97474;border-color:inherit;font-family:serif !important;;font-size:100%;font-weight:bold;
-  text-align:left;vertical-align:top}
 .tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
 @media screen and (max-width: 767px) {.tg {width: auto !important;}.tg col {width: auto !important;}.tg-wrap {overflow-x: auto;-webkit-overflow-scrolling: touch;}}</style>
 <div class="tg-wrap"><table class="tg">
 <tbody>
   <tr>
-    <td class="tg-vrr5">Variable type</td>
+    <td class="tg-za9b">Variable type</td>
     <td class="tg-za9b">Definition</td>
     <td class="tg-za9b">Context</td>
     <td class="tg-za9b">Example</td>
