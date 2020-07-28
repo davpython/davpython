@@ -9,7 +9,7 @@ This is the official site for my book **Data Analysis and Visualization with Pyt
 
 The one lesson every dance instructor I ever had always agreed on regardless of their style (jazz, contemporary, or classical ballet) was this: **technique is a tool to enable artistic expression, not a goal in itself**. I have always carried that lesson with me, even a decade after I stopped my dance career. Even to this book.
 
-I could have called this book **Python for...(something)** or **Python Data...(something)***. The reason I decided to call it **Data Analysis and Visualization...** instead is precisely what I mention above: **Python and its libraries are a tool to enable the craft of data analysis and data visualization**, not the other way around. I wanted the title to reflect the order of my priorities. 
+I could have called this book **Python for...(something)** or **Python Data...(something)**. The reason I decided to call it **Data Analysis and Visualization...** instead is precisely what I mention above: **Python and its libraries are a tool to enable the craft of data analysis and data visualization**, not the other way around. I wanted the title to reflect the order of my priorities. 
 
  More generally, I believe programming languages are no different than "Grande Jetés" and "Arabesques" for dancers, or stone and chisels for sculptors: **tools to enable dancing and sculpture, but not dance and sculpture in itself**. True, tools can be beautiful, and the craft of creating new and better tools can be considered an art in itself, yet I hope we can agree that luthier and violinist are different crafts.  
 

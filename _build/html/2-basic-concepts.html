@@ -28,6 +28,7 @@
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="author" title="About these documents" href="about.html" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -173,8 +174,8 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#non-tabular-data">
-   Non tabular data
+  <a class="reference internal nav-link" href="#nontabular-data">
+   Nontabular data
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -189,7 +190,7 @@
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#time-series-data">
-   Time series data
+   Time-series data
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -209,6 +210,122 @@
    </li>
   </ul>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#descriptive-statistics">
+   Descriptive statistics
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#inferential-statistics">
+   Inferential statistics
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#frequency-table">
+   Frequency table
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#contingency-table">
+   Contingency table
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#percentiles-and-quartiles">
+   Percentiles and quartiles
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-distribution">
+   Data distribution
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#unimodal-and-symmetric">
+     Unimodal and symmetric
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#right-skewed">
+     Right Skewed
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#left-skewed">
+     Left skewed
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#bimodal">
+     Bimodal
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#multimodal">
+     Multimodal
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#completely-symmetric">
+     Completely symmetric
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#measures-of-central-tendency">
+   Measures of central tendency
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#mean">
+     Mean
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#median">
+     Median
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#mode">
+     Mode
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#measures-of-dispersion">
+   Measures of dispersion
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#range">
+     Range
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#interquartile-range">
+     Interquartile range
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#variance">
+     Variance
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#standard-deviation">
+     Standard deviation
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#summary-tables">
+   Summary tables
+  </a>
+ </li>
 </ul>
 
         </nav>
@@ -221,22 +338,25 @@
                 
   <div class="section" id="basic-concepts-in-data-analysis">
 <h1>2. Basic concepts in data analysis<a class="headerlink" href="#basic-concepts-in-data-analysis" title="Permalink to this headline">¶</a></h1>
-<p>In this section we explore and define several key concepts in data analysis. The explanations will be brief, as the goal is to lay the conceptual foundations for the actual data analysis process. Some concepts will be reviewed in more detail later in the book.</p>
+<p>In this section, we explore and define several key concepts in data analysis. The explanations will be brief, as the goal is to lay the conceptual foundations for the actual data analysis process. Some concepts will be reviewed in more detail later in the book.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Libraries for this section</span>
 
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">skewnorm</span>
+<span class="o">%</span><span class="n">config</span> <span class="n">InlineBackend</span><span class="o">.</span><span class="n">figure_format</span><span class="o">=</span><span class="s1">&#39;retina&#39;</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="section" id="tabular-data">
 <h2>Tabular data<a class="headerlink" href="#tabular-data" title="Permalink to this headline">¶</a></h2>
-<p>Data comes in many shapes and sizes. However, in the context of data analysis, we usually prefer to work with <strong>tabular data</strong>. Put simply, <strong>tabular data are collections of values placed in some order in a two-dimensional grid</strong>. The horizontal dimension usually represent records, cases, or samples. The vertical dimension usually represent attributes, variables, or features.</p>
+<p>Data comes in many shapes and sizes. However, in the context of data analysis, we usually prefer to work with <strong>tabular data</strong>. Put simply, <strong>tabular data are collections of values placed in some order in a two-dimensional grid</strong>. The horizontal dimension usually represents records, cases, or samples. The vertical dimension usually represents attributes, variables, or features.</p>
 <p>📓  <strong>Tabular data</strong>:</p>
 <blockquote>
-<div><p>Tabular data are collections of values placed in a two-dimensional grid. The horizontal dimension usually represent records, cases, or samples. The vertical dimension usually represent attributes, variables, or features.</p>
+<div><p>Tabular data are collections of values placed in a two-dimensional grid. The horizontal dimension usually represents records, cases, or samples. The vertical dimension usually represents attributes, variables, or features.</p>
 </div></blockquote>
 <p>Imagine you decide to make a survey among your friends asking how much they enjoyed each of the five <a class="reference external" href="https://en.wikipedia.org/wiki/List_of_Naruto_episodes">Naruto’s seasons</a>. Let’s build a table with their hypothetical responses. There is no need for you to understand the <code class="docutils literal notranslate"><span class="pre">pandas</span></code> code, just the output.</p>
 <div class="cell docutils container">
@@ -317,17 +437,17 @@
 </table>
 </div></div></div>
 </div>
-<p>As you can see, the data structure is clean and simple to understand, just like any spreadsheet. Each row represent one of your friends, and the columns represent their attributes and/or responses.</p>
+<p>As you can see, the data structure is clean and simple to understand, just like any spreadsheet. Each row represents one of your friends, and the columns represent their attributes and/or responses.</p>
 </div>
-<div class="section" id="non-tabular-data">
-<h2>Non tabular data<a class="headerlink" href="#non-tabular-data" title="Permalink to this headline">¶</a></h2>
-<p>Not all data comes in tabular form. As the name suggest, any collection of values that is not arranged in a table falls into this category: image data, video data, audio data, documents, website logs, graph data, and others.</p>
-<p>📓  <strong>Non tabular data</strong>:</p>
+<div class="section" id="nontabular-data">
+<h2>Nontabular data<a class="headerlink" href="#nontabular-data" title="Permalink to this headline">¶</a></h2>
+<p>Not all data comes in tabular form. As the name suggests, any collection of values that are not arranged in a table falls into this category: image data, video data, audio data, documents, website logs, graph data, and others.</p>
+<p>📓  <strong>Nontabular data</strong>:</p>
 <blockquote>
 <div><p>Any data format that is not structured in tabular form. Examples are: image data, video data, audio data, website logs, and graph data.</p>
 </div></blockquote>
-<p>For instance, digital color images are collection of red, green, and blue (RGB) pixels. In addition, you have to consider information about their dimensionality. All together, you need five dimensions to represent an image: red, green, blue, width, and height. Hence, you can’t just fit a JPEG or PNG image into a two-dimensional table. There is a kind of mathematical object called <a class="reference external" href="https://en.wikipedia.org/wiki/Tensor">tensor</a> that can be used to represent higher-dimensional objects, yet it is beyond the scope of this book.</p>
-<p>There are <strong>strategies to coerce non tabular data into tabular form</strong>. For instance, a graph with nodes and links can be tabulated as:</p>
+<p>For instance, digital color images are a collection of red, green, and blue (RGB) pixels. Besides, you have to consider information about their dimensionality. Altogether, you need five dimensions to represent an image: red, green, blue, width, and height. Hence, you can’t just fit a JPEG or PNG image into a two-dimensional table. There is a kind of mathematical object called <a class="reference external" href="https://en.wikipedia.org/wiki/Tensor">tensor</a> that can be used to represent higher-dimensional objects, yet it is beyond the scope of this book.</p>
+<p>There are <strong>strategies to coerce nontabular data into tabular form</strong>. For instance, a graph with nodes and links can be tabulated as:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">graph_data</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;From-node&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;alligator&quot;</span><span class="p">,</span> <span class="s2">&quot;elk&quot;</span><span class="p">,</span> <span class="s2">&quot;whale&quot;</span><span class="p">],</span>
@@ -387,11 +507,11 @@
 </table>
 </div></div></div>
 </div>
-<p>Yet, it is not always the case you can coerce non-tabular into tabular data. Not at least in a way that makes sense from a data analysis perspective. In this book, I am primarily concerned with tabular data, reason why I won’t touch the non-tabular case moving forward.</p>
+<p>Yet, it is not always the case you can coerce non-tabular into tabular data. Not at least in a way that makes sense from a data analysis perspective. In this book, I am primarily concerned with tabular data, which is the reason why I won’t touch the non-tabular case moving forward.</p>
 </div>
 <div class="section" id="relational-databases">
 <h2>Relational databases<a class="headerlink" href="#relational-databases" title="Permalink to this headline">¶</a></h2>
-<p>Relational databases (RLDB)are closely related to tabular data. The concept of a relational database model was  introduced in 1970 by <a class="reference external" href="https://en.wikipedia.org/wiki/Edgar_F._Codd">Edgar F. Codd</a>, a researcher at IBM.</p>
+<p>Relational databases (RLDB)are closely related to tabular data. The concept of a relational database model was introduced in 1970 by <a class="reference external" href="https://en.wikipedia.org/wiki/Edgar_F._Codd">Edgar F. Codd</a>, a researcher at IBM.</p>
 <p>We can think in relational databases as generalizations of tabular data objects: <strong>as collections of data tables associated in some specific manner</strong>, such that the user can operate on multiple tables at once.</p>
 <p>📓  <strong>Relational database</strong>:</p>
 <blockquote>
@@ -543,20 +663,20 @@
 </table>
 </div></div></div>
 </div>
-<p>The traditional way to communicate with relational databases is with <a class="reference external" href="https://en.wikipedia.org/wiki/SQL">SQL</a> or Structured Query Language. There are many versions of SQL around, but they are all pretty similar. The <code class="docutils literal notranslate"><span class="pre">pandas</span></code> library is roughly based on SQL, and it does contain many SQL-like functions to manipulate data. In my experience, relational databases and SQL are the standard tool to deal with enterprise-level data systems, and <code class="docutils literal notranslate"><span class="pre">pandas</span></code> (and R, SPSS, and others) is most commonly used in research contexts and to prototype enterprise-level solutions.</p>
+<p>The traditional way to communicate with relational databases is with <a class="reference external" href="https://en.wikipedia.org/wiki/SQL">SQL</a> or Structured Query Language. There are many versions of SQL around, but they are all pretty similar. The <code class="docutils literal notranslate"><span class="pre">pandas</span></code> library is roughly based on SQL, and it does contain many SQL-like functions to manipulate data. In my experience, relational databases and SQL are the standard tools to deal with enterprise-level data systems, and <code class="docutils literal notranslate"><span class="pre">pandas</span></code> (and R, SPSS, and others) are most commonly used in research contexts and to prototype enterprise-level solutions.</p>
 <p>If you want to learn more about relational databases and data management systems, you can read the original Codd’s paper <a class="reference external" href="https://www.seas.upenn.edu/%7Ezives/03f/cis550/codd.pdf">here</a></p>
 </div>
 <div class="section" id="anatomy-of-a-data-table">
 <h2>Anatomy of a data table<a class="headerlink" href="#anatomy-of-a-data-table" title="Permalink to this headline">¶</a></h2>
-<p>Tables will be the object with which we will interact the most. Sometimes is easier to remember concepts by associating them with graphical displays. Below you can find a chart with the many ways in which each section of table is called on different contexts.</p>
+<p>Tables will be the object with which we will interact the most. Sometimes is easier to remember concepts by associating them with graphical displays. Below you can find a chart illustrating how each section of a table is called on different contexts.</p>
 <p><img alt="" src="_images/anatomy-table.svg" /></p>
 </div>
 <div class="section" id="time-series-data">
-<h2>Time series data<a class="headerlink" href="#time-series-data" title="Permalink to this headline">¶</a></h2>
+<h2>Time-series data<a class="headerlink" href="#time-series-data" title="Permalink to this headline">¶</a></h2>
 <p>Fun fact: <code class="docutils literal notranslate"><span class="pre">pandas</span></code> derives its name from “<strong>pa</strong>nel <strong>da</strong>ta <strong>s</strong>ystem” as <a class="reference external" href="https://google-code-archive-downloads.storage.googleapis.com/v2/code.google.com/pandas/nyfpug.pdf">its original goal</a> was developing a library to primarily manipulate such kind of data. Panel data happens to be an example of time series data as well. In simple terms, time series are <strong>records collected sequentially over time that usually refer to the same entities</strong> (e.g., people, cities, factories, etc).</p>
-<p>📓  <strong>Time series</strong>:</p>
+<p>📓  <strong>Time-series</strong>:</p>
 <blockquote>
-<div><p>Records collected sequentially over time that usually refer to the same entities (e.g., people, cities, factories, etc).</p>
+<div><p>Records collected sequentially over time that usually refers to the same entities (e.g., people, cities, factories, etc).</p>
 </div></blockquote>
 <p>Examples of time series data:</p>
 <ul class="simple">
@@ -566,7 +686,7 @@
 <li><p>Frequency of earthquakes in a country over time</p></li>
 <li><p>Panel survey of political preferences</p></li>
 </ul>
-<p>Any instance where you have repeated measures of some entity will form a time series. A key aspect of this type of data is the dependency between measurements: your political preferences this year, will likely affect your political preferences next year.</p>
+<p>Any instance where you have repeated measures of some entity will form a time series. A key aspect of this type of data is the dependency between measurements: your political preferences this year will likely affect your political preferences next year.</p>
 <p>Suppose you run a small online store and you keep records of the sales of your two main products: “stickers” and “mugs”.  This is how your dataset may look in <code class="docutils literal notranslate"><span class="pre">pandas</span></code>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -721,7 +841,7 @@
 </div>
 <div class="section" id="types-of-variables">
 <h2>Types of variables<a class="headerlink" href="#types-of-variables" title="Permalink to this headline">¶</a></h2>
-<p>During my education I have have the opportunity to learn how sociologists, economists, psychologists, neuroscientists, statisticians, and machine learning experts denominate variables or features. As you can imagine, they do not agree on how to name things, as they probably do not talk to each other all that much. What I learned is to better acquire a vocabulary as eclectic as possible to communicate effectively depending on context.</p>
+<p>During my education, I have had the opportunity to learn how sociologists, economists, psychologists, neuroscientists, statisticians, and machine learning experts denominate variables or features. As you can imagine, they do not agree on how to name things, as they probably do not talk to each other all that much. What I learned is to better acquire a vocabulary as eclectic as possible to communicate effectively depending on the context.</p>
 <p>In this section, I group and provide brief definitions of the most common ways to name variables according to the following criteria: (1) <strong>the “nature” of the entity</strong> to be measured or of <strong>the type measurement</strong>, (2) <strong>their role in causal processes</strong>.</p>
 <div class="section" id="according-to-measurement-type">
 <h3>According to measurement type<a class="headerlink" href="#according-to-measurement-type" title="Permalink to this headline">¶</a></h3>
@@ -928,6 +1048,580 @@
   </tr>
 </tbody>
 </table></div></div>
+</div>
+<div class="section" id="descriptive-statistics">
+<h2>Descriptive statistics<a class="headerlink" href="#descriptive-statistics" title="Permalink to this headline">¶</a></h2>
+<p>There is little you can learn from a spreadsheet by just looking at it as a grid of values. Descriptive statistics are <strong>mathematical transformations that help to characterize different aspects of a dataset</strong>. They are like mathematical lenses that make visible aspects of the data that would be otherwise invisible for the analyst.</p>
+<p>📓  <strong>Descriptive statistics</strong>:</p>
+<blockquote>
+<div><p>Mathematical transformations that help to characterize different aspects of a dataset.</p>
+</div></blockquote>
+<p>Descriptive statistics can be grouped into measures of central tendency, measures of dispersion, and indicators of the shape of a distribution.</p>
+</div>
+<div class="section" id="inferential-statistics">
+<h2>Inferential statistics<a class="headerlink" href="#inferential-statistics" title="Permalink to this headline">¶</a></h2>
+<p>We often want to go beyond characterizing a dataset. Inferential statistics are <strong>mathematical procedures that allow for testing hypotheses and draw conclusions from data, if and only if a series of assumptions about the data are met</strong>.</p>
+<p>📓  <strong>Descriptive statistics</strong>:</p>
+<blockquote>
+<div><p>Mathematical procedures that allow for testing hypotheses and draw conclusions from data, if and only if a series of assumptions about the data are met.</p>
+</div></blockquote>
+<p>This book is not concerned with hypothesis testing or statistical inference. Yet, if you want to embark on the study of statistical inference, a strong foundation is descriptive data analysis is essential.</p>
+</div>
+<div class="section" id="frequency-table">
+<h2>Frequency table<a class="headerlink" href="#frequency-table" title="Permalink to this headline">¶</a></h2>
+<p>One of the simplest ways to look at a dataset is with a frequency table. Frequency tables are a <strong>method to organize values by the number of occurrences of each instance within a variable in a dataset</strong>. It is essentially counting in an organized manner.</p>
+<p>📓  <strong>Frequency table</strong>:</p>
+<blockquote>
+<div><p>Method to organize data by the number of occurrences of each instance within a variable in a dataset</p>
+</div></blockquote>
+<p>Take the following example:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">frequencies</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;age&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">]}</span>
+
+<span class="n">freq_table</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="o">.</span><span class="n">from_dict</span><span class="p">(</span><span class="n">frequencies</span><span class="p">)</span>
+
+<span class="n">freq_table</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-none notranslate"><div class="highlight"><pre><span></span>3    5
+1    4
+2    3
+7    2
+4    2
+Name: age, dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<p>The frequency table above displays the number of times a given age (left column) is repeated (right column) in the dataset, from the more frequent (age 3) to the least frequent (ages 7 and 4). We can display this graphically with a bar chart:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">freq_table</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">(</span><span class="n">sort</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">bar</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/2-basic-concepts_40_0.png" src="_images/2-basic-concepts_40_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="contingency-table">
+<h2>Contingency table<a class="headerlink" href="#contingency-table" title="Permalink to this headline">¶</a></h2>
+<p>Frequency tables are good to visualize univariate distributions or single variables. To look at the joint frequency of two variables, we can use a contingency table which is a method to organize values by the number of occurrences of each instance among pairs of variables.</p>
+<p>📓  <strong>Contingency table</strong>:</p>
+<blockquote>
+<div><p>Method to organize values by the number of occurrences of each instance among pairs of variables.</p>
+</div></blockquote>
+<p>Take for instance:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cross_frequencies</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;smoking&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Yes&quot;</span><span class="p">,</span> <span class="s2">&quot;No&quot;</span><span class="p">,</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span> <span class="s2">&quot;No&quot;</span><span class="p">,</span>
+                                 <span class="s2">&quot;No&quot;</span><span class="p">,</span> <span class="s2">&quot;No&quot;</span><span class="p">,</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span> <span class="s2">&quot;No&quot;</span><span class="p">,</span> <span class="s2">&quot;No&quot;</span><span class="p">,</span> <span class="s2">&quot;No&quot;</span><span class="p">],</span>
+                     <span class="s1">&#39;nationality&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Japanese&quot;</span><span class="p">,</span> <span class="s2">&quot;Uruguayo&quot;</span><span class="p">,</span> <span class="s2">&quot;Japanese&quot;</span><span class="p">,</span>
+                                    <span class="s2">&quot;Japanese&quot;</span><span class="p">,</span> <span class="s2">&quot;Japanese&quot;</span><span class="p">,</span> <span class="s2">&quot;Japanese&quot;</span><span class="p">,</span>
+                                    <span class="s2">&quot;Uruguayo&quot;</span><span class="p">,</span> <span class="s2">&quot;Uruguayo&quot;</span><span class="p">,</span> <span class="s2">&quot;Uruguayo&quot;</span><span class="p">,</span>
+                                    <span class="s2">&quot;Uruguayo&quot;</span><span class="p">,</span> <span class="s2">&quot;Uruguayo&quot;</span><span class="p">,</span> <span class="s2">&quot;Japanese&quot;</span><span class="p">]}</span>
+
+<span class="n">cross_table</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="o">.</span><span class="n">from_dict</span><span class="p">(</span><span class="n">cross_frequencies</span><span class="p">)</span>
+
+<span class="n">pd</span><span class="o">.</span><span class="n">crosstab</span><span class="p">(</span><span class="n">cross_table</span><span class="p">[</span><span class="s1">&#39;nationality&#39;</span><span class="p">],</span> <span class="n">cross_table</span><span class="p">[</span><span class="s1">&#39;smoking&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>smoking</th>
+      <th>No</th>
+      <th>Yes</th>
+    </tr>
+    <tr>
+      <th>nationality</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Japanese</th>
+      <td>2</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>Uruguayo</th>
+      <td>5</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>The contingency above shows the number of times an individual declared to smoke according to their nationality. A simple way to represent contingency tables graphically is with stacked bars:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">crosstab</span><span class="p">(</span><span class="n">cross_table</span><span class="p">[</span><span class="s1">&#39;nationality&#39;</span><span class="p">],</span> <span class="n">cross_table</span><span class="p">[</span><span class="s1">&#39;smoking&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">stacked</span><span class="o">=</span><span class="kc">True</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/2-basic-concepts_45_0.png" src="_images/2-basic-concepts_45_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="percentiles-and-quartiles">
+<h2>Percentiles and quartiles<a class="headerlink" href="#percentiles-and-quartiles" title="Permalink to this headline">¶</a></h2>
+<p>There are cases where dividing the data into subgroups is useful, for instance, you may want to know what values are part of the first 25% of the data. Percentiles are <strong>numbers indicating the value of a variable below which a certain percentage of the data belongs</strong>.</p>
+<p>📓  <strong>Percentiles</strong>:</p>
+<blockquote>
+<div><p>Numbers indicating the value of a variable below which a certain percentage of the data belongs.</p>
+</div></blockquote>
+<p>Quartiles are an extension of percentiles, indicating the <strong>values that mark the 25%, 50%, and 75% percentiles in a given variable</strong>. They are called quartiles because such values divide the data into fourth parts or quarts.</p>
+<p>📓  <strong>Percentiles</strong>:</p>
+<blockquote>
+<div><p>Values that mark the 25%, 50%, and 75% percentiles in a given variable.</p>
+</div></blockquote>
+<p>Percentiles and quantiles will come in handy to understand data distribution and the variability of a dataset.</p>
+</div>
+<div class="section" id="data-distribution">
+<h2>Data distribution<a class="headerlink" href="#data-distribution" title="Permalink to this headline">¶</a></h2>
+<p>Data distribution refers to <strong>the shape that a variable take when put together in a graphical representation like a histogram</strong>. Histograms are essentially bar plots with bars arranged side-by-side and where each bar can vary regarding the range of data that captures.</p>
+<p>📓  <strong>Data distribution</strong>:</p>
+<blockquote>
+<div><p>Shape that a variable take when put together in a graphical representation like a histogram.</p>
+</div></blockquote>
+<p>Data distribution <strong>must not be confounded with probability distribution</strong>. Data distribution is a general term to refer to the organization of a dataset without any reference to a theoretical sample space or population. Probability distributions are mathematical functions describing the likelihood of a random variable taking some value, which is based on a series of assumptions we do not make here. Data distribution can be compared against theoretical probability distribution in a hypothesis testing setting.</p>
+<p>The main purpose of a data distribution is to show in a concise manner several characteristics of the dataset. The key elements to look at in a distribution are <strong>whether the data is centered around none, one, or many points</strong>, and <strong>how dispersion of the data around its center</strong>.</p>
+<div class="section" id="unimodal-and-symmetric">
+<h3>Unimodal and symmetric<a class="headerlink" href="#unimodal-and-symmetric" title="Permalink to this headline">¶</a></h3>
+<p>Unimodal and symmetric distributions have a single peak where most data is concentrated. The frequency of values decreases as you get farther away from the peak. In statistics, this type of distribution is known as a normal distribution.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">distribution_center</span> <span class="o">=</span> <span class="n">skewnorm</span><span class="o">.</span><span class="n">rvs</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">10000</span><span class="p">)</span>
+<span class="n">distribution_center</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">distribution_center</span><span class="p">)</span>
+<span class="n">distribution_center</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">bins</span><span class="o">=</span><span class="mi">50</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/2-basic-concepts_52_0.png" src="_images/2-basic-concepts_52_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="right-skewed">
+<h3>Right Skewed<a class="headerlink" href="#right-skewed" title="Permalink to this headline">¶</a></h3>
+<p>Right skewed or positively distributed data have one peak where most data is concentrated on the left. The frequency of values decreases as you move to the right in the distribution. It’s called “right” skewed because the “tail” of the distribution is longer towards the right.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">distribution_sr</span> <span class="o">=</span> <span class="n">skewnorm</span><span class="o">.</span><span class="n">rvs</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">10000</span><span class="p">)</span>
+<span class="n">distribution_sr</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">distribution_sr</span><span class="p">)</span>
+<span class="n">distribution_sr</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">bins</span><span class="o">=</span><span class="mi">50</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/2-basic-concepts_55_0.png" src="_images/2-basic-concepts_55_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="left-skewed">
+<h3>Left skewed<a class="headerlink" href="#left-skewed" title="Permalink to this headline">¶</a></h3>
+<p>Left skewed or negatively distributed data have one peak where most data is concentrated on the right. The frequency of values decreases as you move to the left in the distribution. It’s called “left” skewed because the “tail” of the distribution is longer towards the left.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">distribution_sl</span> <span class="o">=</span> <span class="n">skewnorm</span><span class="o">.</span><span class="n">rvs</span><span class="p">(</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">10000</span><span class="p">)</span>
+<span class="n">distribution_sl</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">distribution_sl</span><span class="p">)</span>
+<span class="n">distribution_sl</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">bins</span><span class="o">=</span><span class="mi">50</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/2-basic-concepts_58_0.png" src="_images/2-basic-concepts_58_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="bimodal">
+<h3>Bimodal<a class="headerlink" href="#bimodal" title="Permalink to this headline">¶</a></h3>
+<p>Bimodal distributed data has two instead of one peak where most data is concentrated. This is usually indicative of two distinctive groups in your data in that variable.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mu1</span><span class="p">,</span> <span class="n">mu2</span><span class="p">,</span> <span class="n">sigma</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mf">0.5</span> 
+<span class="n">s1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="n">mu1</span><span class="p">,</span> <span class="n">sigma</span><span class="p">,</span> <span class="mi">10000</span><span class="p">)</span>
+<span class="n">s2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="n">mu2</span><span class="p">,</span> <span class="n">sigma</span><span class="p">,</span> <span class="mi">10000</span><span class="p">)</span>
+<span class="n">distribution_bi</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">s1</span><span class="p">),</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">s2</span><span class="p">)])</span>
+<span class="n">distribution_bi</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">bins</span><span class="o">=</span><span class="mi">50</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/2-basic-concepts_61_0.png" src="_images/2-basic-concepts_61_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="multimodal">
+<h3>Multimodal<a class="headerlink" href="#multimodal" title="Permalink to this headline">¶</a></h3>
+<p>Multimodal distributed data has multiple peaks (instead of one or two) where most data is concentrated. This is usually indicative of multiple distinctive groups in your data in that variable.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mu3</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">s3</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="n">mu3</span><span class="p">,</span> <span class="n">sigma</span><span class="p">,</span> <span class="mi">10000</span><span class="p">)</span>
+<span class="n">distribution_mul</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">distribution_bi</span><span class="p">,</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">s3</span><span class="p">)])</span>
+<span class="n">distribution_mul</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">bins</span><span class="o">=</span><span class="mi">50</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/2-basic-concepts_64_0.png" src="_images/2-basic-concepts_64_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="completely-symmetric">
+<h3>Completely symmetric<a class="headerlink" href="#completely-symmetric" title="Permalink to this headline">¶</a></h3>
+<p>Symmetrically distributed data does not have any distinctive peak, indicating that instances are evenly distributed among the range of values for that variable.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">s4</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">10000</span><span class="p">)</span>
+<span class="n">distribution_sym</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">s4</span><span class="p">)</span>
+<span class="n">distribution_sym</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">bins</span><span class="o">=</span><span class="mi">50</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/2-basic-concepts_67_0.png" src="_images/2-basic-concepts_67_0.png" />
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="measures-of-central-tendency">
+<h2>Measures of central tendency<a class="headerlink" href="#measures-of-central-tendency" title="Permalink to this headline">¶</a></h2>
+<p>In nature and society, most things that we measure tend to cluster around one or multiple centers, as we saw in the cases of data distributions. Measures of central tendency are <strong>scores aimed to capture and communicate the most frequently occurring values for a given variable</strong>.</p>
+<p>📓  <strong>Measures of central tendency</strong>:</p>
+<blockquote>
+<div><p>Scores aimed to capture and communicate the most frequently occurring values for a given variable.</p>
+</div></blockquote>
+<p>As you may imagine, there are multiple ways to describe what is “at the center” of something or to count the “most frequently occurring” value or instance. Here I’ll briefly review the three more popular ones: the <strong>mean</strong>, the <strong>median</strong>, and the <strong>mode</strong>.</p>
+<div class="section" id="mean">
+<h3>Mean<a class="headerlink" href="#mean" title="Permalink to this headline">¶</a></h3>
+<p>It turns out that there are multiple kinds of means in mathematics. In most cases, we will be referring to the arithmetic mean or average, which is defined as:</p>
+<div class="math notranslate nohighlight">
+\[
+mean = \frac{1}{n}\sum_{i=1}^{n}x_i = \frac{x_1 + x_2 + ... + x_n}{n}
+\]</div>
+<p>Put simply, the sum of each value divided by the total number of values.</p>
+<p>In <code class="docutils literal notranslate"><span class="pre">pandas</span></code> we can use the <code class="docutils literal notranslate"><span class="pre">mean</span></code> method to compute the mean of any numerical variable:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ages</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;age&#39;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">repeat</span><span class="p">([</span><span class="mi">18</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">21</span><span class="p">],</span> <span class="mi">10</span><span class="p">)}</span>
+
+<span class="n">ages_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="o">.</span><span class="n">from_dict</span><span class="p">(</span><span class="n">ages</span><span class="p">)</span>
+
+<span class="n">ages_data</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-none notranslate"><div class="highlight"><pre><span></span>age    19.857143
+dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="median">
+<h3>Median<a class="headerlink" href="#median" title="Permalink to this headline">¶</a></h3>
+<p>The median is the midpoint  of a distribution, meaning that half of the values will be above the median and the other half below the median. Finding the median usually proceed by sorting the values in a variable and then using some computationally efficient search algorithm that we do not need to know about. If you are interested in median-finding algorithms <a class="reference external" href="https://brilliant.org/wiki/median-finding-algorithm/">check this article</a>.</p>
+<p>In <code class="docutils literal notranslate"><span class="pre">pandas</span></code> we can use the <code class="docutils literal notranslate"><span class="pre">median</span></code> method.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ages_data</span><span class="o">.</span><span class="n">median</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-none notranslate"><div class="highlight"><pre><span></span>age    20.0
+dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="mode">
+<h3>Mode<a class="headerlink" href="#mode" title="Permalink to this headline">¶</a></h3>
+<p>The mode measures the value of a variable that is repeated the most. Similarly to the median, computers implement some version of sorting and/or mode-finding algorithm to solve this problem for us.</p>
+<p>In <code class="docutils literal notranslate"><span class="pre">pandas</span></code> we can check the mode by constructing a sorted frequency table with the <code class="docutils literal notranslate"><span class="pre">value_counts</span></code> method or with the <code class="docutils literal notranslate"><span class="pre">mode</span></code> method.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ages_data</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-none notranslate"><div class="highlight"><pre><span></span>21    30
+19    20
+20    10
+18    10
+Name: age, dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<p>From the frequency table we can see that age 21 is the mode. <code class="docutils literal notranslate"><span class="pre">Pandas</span></code> also have a custom method for the mode:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ages_data</span><span class="o">.</span><span class="n">mode</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>age</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>21</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</div>
+</div>
+<div class="section" id="measures-of-dispersion">
+<h2>Measures of dispersion<a class="headerlink" href="#measures-of-dispersion" title="Permalink to this headline">¶</a></h2>
+<p>Learning about how data is clustered is good, but to obtain a more complete picture of our data with also want to examine how varies around its center(s). There are even cases where you will find distributions with the same or similar mean, median, and mode, yet distributed in widely different manners. Measures of dispersion are <strong>scores aimed to capture and communicate how values are dispersed around its center for a given variable</strong>.</p>
+<p>📓  <strong>Measures of dispersion</strong>:</p>
+<blockquote>
+<div><p>Scores aimed to capture and communicate how values are dispersed around its center for a given variable.</p>
+</div></blockquote>
+<p>Take the example below:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">s1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">10000</span><span class="p">))</span>
+<span class="n">s2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">10000</span><span class="p">))</span>
+<span class="n">s3</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">10000</span><span class="p">))</span>
+
+<span class="nb">print</span> <span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Mean series-1: </span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">s1</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span> <span class="mi">3</span><span class="p">)</span><span class="si">}</span><span class="se">\n</span><span class="s1">&#39;</span>
+       <span class="sa">f</span><span class="s1">&#39;Mean series-2: </span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">s2</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span> <span class="mi">3</span><span class="p">)</span><span class="si">}</span><span class="se">\n</span><span class="s1">&#39;</span>
+       <span class="sa">f</span><span class="s1">&#39;Mean series-3: </span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">s3</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span> <span class="mi">3</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>Mean series-1: 1.049
+Mean series-2: 1.011
+Mean series-3: 1.01
+</pre></div>
+</div>
+</div>
+</div>
+<p>Although the three series have nearly identical means, plotting reveals that they have different shapes:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">s1</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">bins</span><span class="o">=</span> <span class="mi">50</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span> <span class="mf">0.8</span><span class="p">);</span>
+<span class="n">s2</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">bins</span><span class="o">=</span> <span class="mi">50</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span> <span class="mf">0.5</span><span class="p">);</span>
+<span class="n">s3</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">bins</span><span class="o">=</span> <span class="mi">50</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span> <span class="mf">0.5</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/2-basic-concepts_85_0.png" src="_images/2-basic-concepts_85_0.png" />
+</div>
+</div>
+<div class="section" id="range">
+<h3>Range<a class="headerlink" href="#range" title="Permalink to this headline">¶</a></h3>
+<p>The range of variables is a score describing the difference between the largest and smallest value. It is useful to get a sense of what are the limits of variables and to catch unusual values. It’s computed as:</p>
+<div class="math notranslate nohighlight">
+\[
+range = max - min
+\]</div>
+<p>In <code class="docutils literal notranslate"><span class="pre">pandas</span></code> we compute the range as:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ages_data</span><span class="o">.</span><span class="n">max</span><span class="p">()</span> <span class="o">-</span> <span class="n">ages_data</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-none notranslate"><div class="highlight"><pre><span></span>age    3
+dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="interquartile-range">
+<h3>Interquartile range<a class="headerlink" href="#interquartile-range" title="Permalink to this headline">¶</a></h3>
+<p>The interquartile range (IQR) of a variable is a <strong>score measuring the difference between the 75th and 25th percentiles of a variable, or the difference between the first and third quartiles</strong>. Is computed as:</p>
+<div class="math notranslate nohighlight">
+\[
+IQR = Q_3 - Q_1
+\]</div>
+<p>In <code class="docutils literal notranslate"><span class="pre">pandas</span></code> we compute the IQR as:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ages_data</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="o">.</span><span class="mi">75</span><span class="p">)</span> <span class="o">-</span> <span class="n">ages_data</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="o">.</span><span class="mi">25</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-none notranslate"><div class="highlight"><pre><span></span>age    2.0
+dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="variance">
+<h3>Variance<a class="headerlink" href="#variance" title="Permalink to this headline">¶</a></h3>
+<p>Put simply, the variance is a <strong>score measuring the spread of a set of values around their average value</strong>. The variance has a more technical definition in probability theory, which mathematically can be expressed as:</p>
+<div class="math notranslate nohighlight">
+\[
+S^2 = \frac{\sum_{i=1}^n(x_i-\hat{x})^2}{n-1}
+\]</div>
+<p>Where <span class="math notranslate nohighlight">\(S^2\)</span> is the variance, <span class="math notranslate nohighlight">\(x_i\)</span> is a single value, <span class="math notranslate nohighlight">\(\hat{x}\)</span> is the mean of all values, and <span class="math notranslate nohighlight">\(n\)</span> is the total number of values.</p>
+<p>The variance plays a central role in probability theory and hypothesis testing, but in the context of exploratory data analysis, its main purpose is to help to better understand the shape of a distribution.</p>
+<p>In <code class="docutils literal notranslate"><span class="pre">pandas</span></code> we can compute the variance as:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ages_data</span><span class="o">.</span><span class="n">var</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-none notranslate"><div class="highlight"><pre><span></span>age    1.283644
+dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="standard-deviation">
+<h3>Standard deviation<a class="headerlink" href="#standard-deviation" title="Permalink to this headline">¶</a></h3>
+<p>Informally, the standard deviation (SD) has the same meaning that the variance: <strong>a score measuring the spread of a set of values around their average value</strong>. The key difference is that <strong>the SD is expressed in the same units as the mean</strong>. This makes the SD the preferred option when describing the dispersion of the data in exploratory data analysis. Mathematically, the SD is the square root of the variance:</p>
+<div class="math notranslate nohighlight">
+\[
+\sigma^2 = \sqrt{\frac{\sum_{i=1}^n(x_i-\hat{x})^2}{n-1}}
+\]</div>
+<p>In <code class="docutils literal notranslate"><span class="pre">pandas</span></code> we can compute the standard deviation as:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ages_data</span><span class="o">.</span><span class="n">std</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-none notranslate"><div class="highlight"><pre><span></span>age    1.13298
+dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="summary-tables">
+<h2>Summary tables<a class="headerlink" href="#summary-tables" title="Permalink to this headline">¶</a></h2>
+<p>In the previous sections, we examined and computed measures of central tendency and dispersion one by one. Normally you would not do this as it’s time-consuming and cumbersome. Summary tables are a way to put together several measures of central tendency and dispersion to obtain a quick overview of the dataset. <code class="docutils literal notranslate"><span class="pre">Pandas</span></code> provides the <code class="docutils literal notranslate"><span class="pre">describe</span></code> method to construct summary tables:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ages_data</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>age</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>70.000000</td>
+    </tr>
+    <tr>
+      <th>mean</th>
+      <td>19.857143</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>1.132980</td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td>18.000000</td>
+    </tr>
+    <tr>
+      <th>25%</th>
+      <td>19.000000</td>
+    </tr>
+    <tr>
+      <th>50%</th>
+      <td>20.000000</td>
+    </tr>
+    <tr>
+      <th>75%</th>
+      <td>21.000000</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td>21.000000</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
 </div>
 </div>
 

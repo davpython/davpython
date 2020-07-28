@@ -35,62 +35,61 @@ I do not pretend to cover all the libraries out there, just because they are too
 
 It is no exaggeration to say that [NumPy](https://numpy.org/) is at the core of the entire scientific computing Python ecosystem, both as a standalone package for numerical computation and as the engine behind most data science packages.
 
-NumPy is a package for array-like or matrix-like high-performance computation. Its “engine” is written in C, meaning that NumPy utilized “in the background” pre-compiled C code to perform computations.
+`NumPy` is a package for array-like or matrix-like high-performance computation. Its “engine” is written in C, meaning that `NumPy` utilized “in the background” pre-compiled C code to perform computations.
 
-Although it is not our  main tool, we will use NumPy at different parts of the data analysis process. 
+Although it is not our  main tool, we will use `NumPy` at different parts of the data analysis process. 
 
-An alternative to NumPy is [Xarray](http://xarray.pydata.org/en/stable/), which introduces labels to multidimensional arrays. 
+An alternative to `NumPy` is [Xarray](http://xarray.pydata.org/en/stable/), which introduces labels to multidimensional arrays. 
 
-### Pandas
-
-
-Given its versatility and easy to use interface, [pandas](https://pandas.pydata.org/) has become one of the main tools in the data analysis toolkit. In the Python ecosystem, it is regarded as the **main data wrangling library by far**. In short, pandas provides objects and methods to: **ingest, clean, transform, explore, and output datasets from all sizes**. It can easily take care of datasets in order of millions of datapoints or several gigabytes, replacing -to some extent- the need for "big data" solutions like [Hadoop](https://hadoop.apache.org/) or [Spark](https://spark.apache.org/). 
+### `pandas`
 
 
-The pandas library reach its full potential when used in tandem with libraries like NumPy, Scipy, Matplotlib, and others. In this sense, pandas is "at the core" of the data analysis process, reason why we will devote more time to pandas than to any other library in this course.
+Given its versatility and easy to use interface, [pandas](https://`pandas`.pydata.org/) has become one of the main tools in the data analysis toolkit. In the Python ecosystem, it is regarded as the **main data wrangling library by far**. In short, `pandas` provides objects and methods to: **ingest, clean, transform, explore, and output datasets from all sizes**. It can easily take care of datasets in order of millions of datapoints or several gigabytes, replacing -to some extent- the need for "big data" solutions like [Hadoop](https://hadoop.apache.org/) or [Spark](https://spark.apache.org/). 
+
+
+The `pandas` library reach its full potential when used in tandem with libraries like NumPy, Scipy, Matplotlib, and others. In this sense, `pandas` is "at the core" of the data analysis process, reason why we will devote more time to `pandas` than to any other library in this course.
 
 ### SciPy
 
-[SciPy](https://www.scipy.org/) is both a library and ecosystem. Here we refer to the [SciPy library](https://www.scipy.org/scipylib/index.html). The goal of Scipy is to provide several easy to use objects and methods for numerical computation, optimization, linear algebra, and statistics. 
+[SciPy](https://www.scipy.org/) is both a library and ecosystem. Here we refer to the [SciPy library](https://www.scipy.org/scipylib/index.html). The goal of `Scipy` is to provide several easy to use objects and methods for numerical computation, optimization, linear algebra, and statistics. 
 
 ### Statsmodels
 
 For a long time, people working in statistical analysis could not find a Python-based user-friendly solution for statistics, so they mainly utilized R, SPSS, SAS, and other programming languages. 
 
-
 The [Statsmodels](https://www.statsmodels.org/stable/index.html) package takes care of such a need by providing a series of classes and methods for statistical modeling, ranging from basic hypothesis testing to complex linear mixed effects models. Its interface is based on R, making it easy to adopt for R users. 
 
 ### PyMC3
 
-In recent years Bayesian statistics have been adopted as an alternative to traditional frequentist statistics. PyMC3 is a Python based library for Bayesian statistical modeling and probabilistic machine learning. I do not plan to cover Bayesian statistics in this course, yet it is useful know such a library exist.
+In recent years Bayesian statistics have been adopted as an alternative to traditional frequentist statistics. `PyMC3` is a Python based library for Bayesian statistical modeling and probabilistic machine learning. I do not plan to cover Bayesian statistics in this course, yet it is useful know such a library exist.
 
 ### Scikit-Learn
 
-[Sckit-learn](https://scikit-learn.org/stable/) it is a library for machine learning and predictive analytics, and one of the most popular libraries in the data science ecosystem. Even though this is not a machine learning course, we will make use of sckit-learn from time to time as it offers several convenient functions for common data analysis tasks like clustering and dimensionality reduction.
+[Sckit-learn](https://scikit-learn.org/stable/) it is a library for machine learning and predictive analytics, and one of the most popular libraries in the data science ecosystem. Even though this is not a machine learning course, we will make use of `sckit-learn` from time to time as it offers several convenient functions for common data analysis tasks like clustering and dimensionality reduction.
 
 ### Matplotlib
 
 Python has a strong data visualization ecosystem, and [Matplotlib](https://matplotlib.org/) is at the center of it. It is the most mature, stable, flexible, and versatile data visualization library in Python. Although it is designed with 2-dimensional graphics in mind, it can also handle 3-dimensional and interactive graphics. It follows a -mostly- imperative interface, meaning the user has to explicitly declare most details of the chart which makes it a bit verbose at times. 
 
-Matplotlib, and the rest of the Python data science stack, became famous when [the first images of a black hole](https://www.blog.pythonlibrary.org/2019/04/11/python-used-to-take-photo-of-black-hole/) were produced with this library.
+`Matplotlib`, and the rest of the Python data science stack, became famous when [the first images of a black hole](https://www.blog.pythonlibrary.org/2019/04/11/python-used-to-take-photo-of-black-hole/) were produced with this library.
 
 ### Seaborn
 
-[Seaborn](https://seaborn.pydata.org/) was developed as a high-level interface for Matplotlib with the aim to simplify chart creation for common tasks. Charts that take a couple of dozens of lines in Matplotlib may be produced with one or two lines in Seaborn. The trade off offered by Seaborn is less control regarding the display and aesthetics, for a simpler to use interface for fast development.
+[Seaborn](https://seaborn.pydata.org/) was developed as a high-level interface for `Matplotlib` with the aim to simplify chart creation for common tasks. Charts that take a couple of dozens of lines in `Matplotlib` may be produced with one or two lines in `Seaborn`. The trade off offered by `Seaborn` is less control regarding the display and aesthetics, for a simpler to use interface for fast development.
 
 ### Altair
 
-[Altair](https://altair-viz.github.io/) is another data visualization library for Python, probably the younger from the lot. What distinguishes Altair from other libraries is its "declarative approach" to statistical graphics, based on the so-called [grammar of graphics](https://rb.gy/yb78qp). With Matplotlib you focus in the "how" to put things in place, whereas with Altair you focus in the "what". 
+[Altair](https://altair-viz.github.io/) is another data visualization library for Python, probably the younger from the lot. What distinguishes `Altair` from other libraries is its "declarative approach" to statistical graphics, based on the so-called [grammar of graphics](https://rb.gy/yb78qp). With `Matplotlib` you focus in the "how" to put things in place, whereas with` Altair` you focus in the "what". 
 
-Altair is primarily aimed to work with tabular data, particularly with the pandas DataFrame object. The logic behind Altair is to utilize a elegant and consistent syntax that combines a series of graphical primitives with a series of graphical combinatorial rules. Altair trade off is similar to Seaborn: less control for simplicity and fast development.
+`Altair` is primarily aimed to work with tabular data, particularly with the `pandas` DataFrame object. The logic behind `Altair` is to utilize a elegant and consistent syntax that combines a series of graphical primitives with a series of graphical combinatorial rules. `Altair` trade off is similar to `Seaborn`: less control for simplicity and fast development.
 
-I personally like utilizing Altair as I believe the mental model that provides is exceptionally good, so I will Altair cover in this course rather than Seaborn. 
+I personally like utilizing `Altair` as I believe the mental model that provides is exceptionally good, so I will `Altair` cover in this course rather than `Seaborn`. 
 
 ### Bokeh
 
-Python also provide libraries for web-based interactive data visualization. All those cool interactive charts you find online in the places websites the New York Times can be created with Libraries like [Bokeh](https://docs.bokeh.org/en/latest/index.html). Bokeh provides an elegant and concise interface for interactive graphics, and can easily handle large or streaming datasets online. 
+Python also provide libraries for web-based interactive data visualization. All those cool interactive charts you find online in the places websites the New York Times can be created with Libraries like [Bokeh](https://docs.bokeh.org/en/latest/index.html). `Bokeh` provides an elegant and concise interface for interactive graphics, and can easily handle large or streaming datasets online. 
 
-An alternative to Bokeh is [Plotly](https://plotly.com/), which has the advantage of working with multiple programming languages. 
+An alternative to `Bokeh` is [Plotly](https://plotly.com/), which has the advantage of working with multiple programming languages. 
 
 ## Prerequisites
 
