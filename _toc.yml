@@ -4,5 +4,7 @@
 - file: content
 - file: 1-intro
 - file: 2-basic-concepts
+- file: 3-data-workflow
+
   # sections:
   #   - file: part-I

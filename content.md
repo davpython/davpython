@@ -47,13 +47,10 @@ Site under constructrion 👷
  - Measures of dispersion
  - Summary tables
 
-**Forthcoming**:
-
 **3. Data analysis workflow**
 - Questions 
 - Data loading
-- Data cleaning
-- Data formating
-- Data exploration and visualization
-- Data modeling
-- Insight and communication
+
+**Forthcoming**:
+
+**3. Data analysis workflow in practice: case study I**

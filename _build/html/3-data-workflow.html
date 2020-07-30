@@ -1,0 +1,283 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>3. Data Analysis Workflow &#8212; Data Analysis and Visualization with Python</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/jupyter-sphinx.css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/sphinx-book-theme.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/mystnb.js"></script>
+    <script src="_static/sphinx-book-theme.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="author" title="About these documents" href="about.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="2. Basic concepts in data analysis" href="2-basic-concepts.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="index.html">
+  
+  <img src="_static/logo-book-2-small.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Data Analysis and Visualization with Python</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="welcome.html">
+   Welcome
+  </a>
+ </li>
+</ul>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="about.html">
+   About
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="scope.html">
+   Book Scope
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="content.html">
+   Book Contents
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="1-intro.html">
+   1. Introduction to data analysis with Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="2-basic-concepts.html">
+   2. Basic concepts in data analysis
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   3. Data Analysis Workflow
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/3-data-workflow.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> On this page
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#questions">
+   Questions
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-collection">
+   Data collection
+  </a>
+ </li>
+</ul>
+
+        </nav>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="data-analysis-workflow">
+<h1>3. Data Analysis Workflow<a class="headerlink" href="#data-analysis-workflow" title="Permalink to this headline">¶</a></h1>
+<p>Regardless of what you may have heard, <strong>there is not such a thing as well established sequence of steps to perform data analysis</strong>. Any person that has done data analysis for research or industrial applications knows that getting insights from data is a <strong>nonlinear process</strong>.  True, you have to import data before plotting data, but you may find yourself reimporting more or better data after presumably completing the visualization part. The same goes for each part of the data analysis process: going back and forth between different stages as you discover great things and issues with your data is a fact of life.</p>
+<p>What we do have in data analysis are <strong>idealized models</strong> of how the process should go. A prominent example is this scheme from <a class="reference external" href="https://r4ds.had.co.nz/explore-intro.html">Grolemud and Wickham</a>:</p>
+<p><img alt="" src="images/tidy-model.svg" /></p>
+<p>Under Grolemud’s and Wickham’s scheme, you have a first linear process of importing and tidying (i.e., putting the data in tabular form), followed by a nonlinear part of transforming, visualizing, and modeling, and a final stage of communicating your results. This model is a perfectly good scheme to follow, and you can find numerous similar proposals online or in data analysis textbooks. This diversity of proposals reinforces my initial point: there is no such thing as universally accepted “right” way to do data analysis. <strong>Trial and error</strong> and <strong>flexibility</strong> are fundamental aspects of an effective data analysis process.</p>
+<p>Proposing data analysis workflows seems to be a lot of fun, so I want to make my own too. According to my experience, this is how an idealized process may look:</p>
+<ul class="simple">
+<li><p>Questions</p></li>
+<li><p>Data collection</p></li>
+<li><p>Data loading</p></li>
+<li><p>Data cleaning</p></li>
+<li><p>Data formating</p></li>
+<li><p>Data transformation</p></li>
+<li><p>Data exploration and visualization</p></li>
+<li><p>Data modeling</p></li>
+<li><p>Insight and communication</p></li>
+</ul>
+<p>The graphic below illustrate my view of the data analysis process.</p>
+<p><img alt="" src="_images/data-workflow.svg" /></p>
+<p>I’ll admit right away that my scheme is similar to Grolemud’s and Wickham’s but in all fairness, all schemes are similar to each other. However, there are a couple of differences that are important to highlight. First, I want to emphasize <strong>the nonlinearity of the data analysis process</strong>, illustrated by the arrows pointing backward in the scheme. For instance, the data cleaning process often left you with not enough quality data to do any meaningful analysis, which will lead you to collect more data. The transformation, exploration, and modeling cycle can also indicate that more cleaning and or more data is required. And the insights and communication process often works as a source for new questions. And second, the <strong>creative process of making questions and coming up with data collection procedures</strong> is also often a part of the data analysis process.</p>
+<p>Next, I will address each of these stages with a <strong>practical example analyzing real data</strong>. Before jumping into coding, I want to briefly address the first two stages, <strong>Questions</strong> and <strong>Data collection</strong> at a conceptual level as they are processes usually done in teams and before any actual coding happens.</p>
+<div class="section" id="questions">
+<h2>Questions<a class="headerlink" href="#questions" title="Permalink to this headline">¶</a></h2>
+<p>Broadly speaking, questions in data analysis have three goals: (1) to <strong>describe</strong> the data in a <strong>non-causal fashion</strong>, (2) to <strong>establish causality</strong>, (3) to generate more targeted questions by <strong>freely exploring</strong> the data. These goals match with the methods of descriptive and/or exploratory research, correlational an/or causal research, and purely exploratory research. I make the distinction between descriptive and/or exploratory research and purely exploratory, to emphasize that the former usually have well-defined questions guiding the analysis, whereas the latter is more open and inductive in terms of questions and methods, meaning that questions can become about causal relationships.</p>
+<p><strong>Examples of descriptive analysis questions</strong>:</p>
+<ul class="simple">
+<li><p>What is the demographic profile of the company customers?</p></li>
+<li><p>What is the percentage of votes that liberal candidates for congress obtained in the last election?</p></li>
+<li><p>What are the main characteristics of the geomorphology of the south of Africa?</p></li>
+<li><p>Which are the preferred technologies among web developers in Europe?</p></li>
+<li><p>What are the main sources of income in the Japanese economy?</p></li>
+</ul>
+<p><strong>Examples of inferential analysis questions</strong>:</p>
+<ul class="simple">
+<li><p>Do older customers have different preferences for coffee in my coffee shop?</p></li>
+<li><p>Is infant mortality significantly higher in countries with access to universal public health?</p></li>
+<li><p>Do gun control significantly reduces the rate of violent crimes?</p></li>
+<li><p>Do participants in the treatment group of a COVID-19 clinical trial vaccine have a lower infection rate that participants in the control group?</p></li>
+<li><p>Is weather significantly associated with economic growth?</p></li>
+</ul>
+<p><strong>Examples of purely exploratory analysis questions</strong>:</p>
+<ul class="simple">
+<li><p>Does my data contain any meaningful clustering pattern?</p></li>
+<li><p>Are some variables in my data associated?</p></li>
+<li><p>How does distribution in my dataset look like?</p></li>
+</ul>
+</div>
+<div class="section" id="data-collection">
+<h2>Data collection<a class="headerlink" href="#data-collection" title="Permalink to this headline">¶</a></h2>
+<p>There exist a wide variety of data collection methods, and data analyst may or may not be involved in such a process. The possibilities are so vast that it makes no sense trying to catalog all of them. Data can come from telescopes, surveys, ethnographies, clinical trials, census, logs from videogames, financial transactions, etc. Instead of attempting the impossible task of enumerating all methods, I want to focus my attention on the following two questions: (1) <strong>can the analyst collect more data?</strong>, (2) <strong>does the data come from a study/experiment or it was collected “on the wild”?</strong></p>
+<p>Having the capacity of collecting more data can be a good or a bad thing depending on the kind of problem you are facing. In descriptive data analysis and machine learning projects, having such capacity is a good thing. From a descriptive analysis perspective, more data enables us to expand the dataset to understand things better. From a machine learning perspective, more data usually equals higher accuracy and less overfitting. Now, if your goal is hypothesis testing or causal inference, having the capacity of collecting more data <em>after the modeling phase</em> can be a bad thing as enables p-hacking and other bad practices in statistical inference. True, is ultimately up to the analyst to engage or not in bad practices, but <strong>the temptation is there</strong> and other members of the team that may not be aware of the risk may put pressure on the analyst.</p>
+<p>When data are collected in a controlled situation like an experiment or a survey, the data analysis process can be carefully planned, and the question-answering process becomes easier. When data is gathered from secondary sources or “in the wild” through methods like web-scraping or utilizing someone else’s data, the data analysis becomes harder. In such a context, asking exactly the question you wanted you to ask may be hard or impossible, and a more exploratory and flexible mindset is necessary.</p>
+</div>
+</div>
+
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="2-basic-concepts.html" title="previous page">2. Basic concepts in data analysis</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Pablo Caceres<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="_static/js/index.js"></script>
+    
+  </body>
+</html>
