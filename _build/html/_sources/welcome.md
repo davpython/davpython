@@ -31,7 +31,7 @@ With this book I am to help you learn:
 ## What you will NOT learn
 
 - Confirmatory data analysis
-- Cuasal inference
+- Causal inference
 - Machine learning
 - Deep learning
 
